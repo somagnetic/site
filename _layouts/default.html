@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>{{page.title}}</title>
+    <meta name="description" content="{{page.description | truncate: 200}}" />
+
+    {% if page.custom_css %}
+      {% for stylesheet in page.custom_css %}
+      <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/{{ stylesheet }}.css" media="screen"/>
+      {% endfor %}
+    {% else %}
+      <link rel="stylesheet" type="text/css" href="{{site.baseurl}}/css/master.css" media="screen"/>
+    {% endif %}
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="author" href="https://plus.google.com/106679625106063278529" />
+    <meta name="theme-color" content="#353263" />
+
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href=" {{ site.url }}{{ page.url }}" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@itssomagnetic" />
+    <meta name="twitter:creator" content="@itssomagnetic" />
+    <meta name="twitter:url" content="https://compassofdesign.com" />
+    <meta name="twitter:title" content="{{page.title}}" />
+    <meta name="twitter:description" content="{{page.description | truncate: 196}}" />
+    <meta name="twitter:image" content="{% if page.cdn %}{{page.cdn}}{% elsif page.index_image %}https://compassofdesign.com{{page.index_image}}{% else %}https://compassofdesign.com/assets/img/index.jpg{% endif %}" />
+
+    <meta name="p:domain_verify" content="4990647bc88b5df93fc24e07f254d0a9"/>
+
+    <meta property="fb:app_id" content="1076166062457470" />
+    <meta property="og:url" content="{{site.url}}/{{page.id}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{page.title}}" />
+    <meta property="og:image" content="{% if page.cdn %}{{page.cdn}}{% elsif page.index_image %}https://compassofdesign.com{{page.index_image}}{% else %}https://compassofdesign.com/assets/img/index.jpg{% endif %}" />
+    <meta property="og:description" content="{{page.description | truncate: 167}}" />
+    <meta property="og:site_name" content="Darian Rosebrook" />
+    <meta property="og:locale" content="en_US" />
+
+  </head>
+  <body>
+    {{content}}
+  </body>
+</html>
+  
