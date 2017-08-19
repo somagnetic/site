@@ -21,9 +21,12 @@
         </label>
       </div>
       <p class=" continue questionnaire-part-1 project">
-        Alright! In order for me to focus and deliver
-      the best possible solution for you and your organization, I just need a little more information. This takes a very short amount of time and allows me to keep your organization's audience and goals at the forefront of the design.
+      Alright! In order for me to focus and deliver the best possible solution for you and your organization, I just need a little more information. This takes a very short amount of time and allows me to keep your organization's audience and goals at the forefront of the design.
       </p>
+      <div class="continue project questionnaire-part-2">
+        <input type="text" name="message" class="transition enter text-center" value="" placeholder="Referral? Twitter?">
+        <h4 class="enter" > How did you hear about So Magnetic?</h4>
+      </div>
       <div class="continue project questionnaire-part-2">
         <input type="text" name="message" class="transition enter text-center" value="" placeholder="e.g. (Avenue Editorial, Inc.)">
         <h4 class="enter" > What is the name of your business or the company you work for?</h4>
@@ -31,27 +34,69 @@
       <div class="continue project questionnaire-part-3">
         <input type="text" name="message" class="transition enter text-center" value="" placeholder="e.g (+1 360 555 555)">
         <h4 class="enter" > What is a good phone number to reach you at?</h4>
-    </div>
-      <div class="continue project questionnaire-part-4">
-        <input type="text" name="message" class="transition enter text-center" value="" placeholder="http://...">
-        <h4 class="enter" >Does your organization have a website? I'd love to see it!</h4>
       </div>
-      <div id="special" class="continue project questionnaire-part-5">
-      <textarea name="message" class="transition enter text-center "  placeholder="What makes you guys unique?"></textarea>
+      <div id="special" class="continue project questionnaire-part-4">
+      <textarea name="message" class="transition enter text-center "  placeholder="The more specific the better."></textarea>
       <h4 class="enter" > What does your organization do and what excites you most about it?</h4>
       </div>
+
+      <div class="continue project questionnaire-part-4">
+        <input type="text" name="message" class="transition enter text-center" value="" placeholder="What makes you unique?">
+        <h4 class="enter" >How does what you do differ from your competition?</h4>
+      </div>
       <div class="continue project questionnaire-part-6">
-        <textarea name="message" class="transition enter text-center "  placeholder="What looks like success for you?"></textarea>
-        <h4 class="enter" > How will design help accomplish your goals as an organization?</h4>
+        <input type="radio" class="hidden" name="org-size" id="org-size-1" value="1-10 people">
+        <input type="radio" class="hidden" name="org-size" id="org-size-2" value="10-20 people">
+        <input type="radio" class="hidden" name="org-size" id="org-size-3" value="20-50 people">
+        <input type="radio" class="hidden" name="org-size" id="org-size-4" value="100 plus">
+        <div class="container check-container">
+          <label class="module" for="org-size-1"> 1-10 people</label>
+          <label class="module" for="org-size-2"> 10-20 people</label>
+          <label class="module" for="org-size-3"> 20-50 people</label>
+          <label class="module" for="org-size-4">100 + people</label>
+        </div>
+        <h4 class="enter" > How big is your organization?</h4>
       </div>
       <div class="continue project questionnaire-part-7">
         <input type="text" name="message" class="transition enter text-center" value="" placeholder="e.g. (middle aged adults who haven't given up being a teenager)">
         <h4 class="enter" > Who is the audience you are trying to reach?</h4>
       </div>
-
+      <div class="continue project questionnaire-part-7">
+        <input type="text" name="message" class="transition enter text-center" value="" placeholder="e.g. Word of mouth, advertisements, Social Media">
+        <h4 class="enter" > How do people find out about your organization?</h4>
+      </div>
+      <div class="continue project questionnaire-part-7">
+        <input type="text" name="message" class="transition enter text-center" value="" placeholder="e.g. Trustworthy, Energetic, Formal, Casual">
+        <h4 class="enter" > What attributes does your organization value?</h4>
+      </div>
+      <div class="continue project questionnaire-part-7">
+        <input type="text" name="message" class="transition enter text-center" value="" placeholder="e.g. Urban Outfitters, Starbucks, HBO, Instagram">
+        <h4 class="enter" > What brands do you admire in your industry?</h4>
+      </div>
+      <div class="continue project questionnaire-part-7">
+        <input type="text" name="message" class="transition enter text-center" value="" placeholder="Specific dates are helpful here">
+        <h4 class="enter" >Is there a special event or launch date that is going to drive the deadline of this project?</h4>
+      </div>
+      <div class="continue project questionnaire-part-7">
+        <input type="text" name="message" class="transition enter text-center" value="" placeholder="More recurring revenue, pre-launch sales, etc.">
+        <h4 class="enter" >What does the success from this project look like to you?</h4>
+      </div>
+      <div class="continue project questionnaire-part-7">
+        <input type="text" name="message" class="transition enter text-center" value="" placeholder="e.g. Urban Outfitters, Starbucks, HBO, Instagram">
+        <h4 class="enter" > What brands do you admire in your industry?</h4>
+      </div>
+      <div class="continue project questionnaire-part-6">
+        <input type="radio" class="hidden" name="hire-before" id="hire-before-1" value="1-10 people">
+        <input type="radio" class="hidden" name="hire-before" id="hire-before-2" value="10-20 people">
+        <div class="container check-container">
+          <label class="module" for="hire-before-1">Yes</label>
+          <label class="module" for="hire-before-2">No</label>
+        </div>
+        <h4 class="enter" >Have you worked with a design agency in the past (this project or any before)?</h4>
+      </div>
       <div class="questionnaire-part-1 continue message project" >
       <textarea name="message" placeholder="Your Message..." class="transition enter text-center " ></textarea>
-      <h4 class="message enter"><span class="hidden project">Is there anything else I need to know about the project?</span><span class="hidden message">How's it going? :D</span></h4>
+      <h4 class="message enter"><span class="hidden project">Is there any additional information that needs to be taken into consideration?</span><span class="hidden message">How's it going? :D</span></h4>
       </div>
       <input type="text" name="_gotcha" class="hidden" />
       <p class="continue project"> Thank you! This filled form here will help me keep your organization's goals and audience in the forefront of the design.</p>

@@ -45,7 +45,7 @@
   <body>
     {{content}}
 
-  {% include contact.html %}
+  {%if page.url contains "continue"%}{%else%}{% include contact.html %}{%endif%}
   <footer class="container">
         <h3>
         <a href="https://twitter.com/itssomagnetic"><i class="fa fa-twitter module"><span class="hidden">twitter</span></i></a> |

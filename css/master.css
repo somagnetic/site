@@ -399,6 +399,18 @@ form input[name$="-ux"]:checked ~ .container label[for$="-ux"] {
   background-color: rgba(33, 33, 33, 0.4); }
 form input[name$="-hello"]:checked ~ .container label[for$="-hello"] {
   background-color: rgba(33, 33, 33, 0.4); }
+form input[id$="size-1"]:checked ~ .container label[for$="size-1"] {
+  background-color: rgba(33, 33, 33, 0.4); }
+form input[id$="size-2"]:checked ~ .container label[for$="size-2"] {
+  background-color: rgba(33, 33, 33, 0.4); }
+form input[id$="size-3"]:checked ~ .container label[for$="size-3"] {
+  background-color: rgba(33, 33, 33, 0.4); }
+form input[id$="size-4"]:checked ~ .container label[for$="size-4"] {
+  background-color: rgba(33, 33, 33, 0.4); }
+form input[id$="-before-1"]:checked ~ .container label[for$="before-1"] {
+  background-color: rgba(33, 33, 33, 0.4); }
+form input[id$="-before-2"]:checked ~ .container label[for$="before-2"] {
+  background-color: rgba(33, 33, 33, 0.4); }
 form .container {
   display: flex;
   padding: 3rem 0;
@@ -472,6 +484,12 @@ form .container {
   #contact .continue.questionnaire-part-1 {
     height: auto;
     color: #eb2441; }
+  #contact .continue.questionnaire-part-6 input[type="checkbox"] {
+    width: auto;
+    transform: none;
+    position: static; }
+  #contact .continue.questionnaire-part-6 label {
+    height: 10vh; }
   #contact .project .enter:focus, #contact .project .enter:hover {
     opacity: 1; }
     #contact .project .enter:focus + h6, #contact .project .enter:hover + h6 {
