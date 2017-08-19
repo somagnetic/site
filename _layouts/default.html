@@ -36,19 +36,24 @@
     <meta property="og:url" content="{{site.url}}/{{page.id}}" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="{{page.title}}" />
-    <meta property="og:image" content="{% if page.cdn %}{{page.cdn}}{% elsif page.index_image %}https://compassofdesign.com{{page.index_image}}{% else %}https://compassofdesign.com/assets/img/index.jpg{% endif %}" />
+    <meta property="og:image" content="{% if page.cdn %}{{page.cdn}}{% elsif page.index_image %}https://somagnetic.com{{page.index_image}}{% else %}https://somagnetic.com/assets/img/index.jpg{% endif %}" />
     <meta property="og:description" content="{{page.description | truncate: 167}}" />
-    <meta property="og:site_name" content="Darian Rosebrook" />
+    <meta property="og:site_name" content="So Magnetic" />
     <meta property="og:locale" content="en_US" />
 
   </head>
   <body>
     {{content}}
-  <footer>
-    {% include contact.html %}
+
+  {% include contact.html %}
+  <footer class="container">
+        <h3>
+        <a href="https://twitter.com/itssomagnetic"><i class="fa fa-twitter module"><span class="hidden">twitter</span></i></a> |
+        <a href="https://dribbble.com/somagnetic"><i class="fa fa-dribbble module"><span class="hidden">dribbble</span></i></a> |
+        <a href="https://instagram.com/itssomagnetic"><i class="fa fa-instagram module"><span class="hidden">instagram</span></i></a> </h3>
+        <h4>&copy; So Magnetic LLC</h4>
   </footer>
   <script type="text/javascript" src="{{site.baseurl}}/scripts/scripts.js">
-
   </script>
   </body>
 </html>

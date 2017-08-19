@@ -7,7 +7,7 @@ html
   background: $light
   font-family: 'hk-nova-regular', "Helvetica", Arial, Verdana, sans-serif
   font-size: 62.5%
-  color: $grey
+  color: $dark
 body
   font-size: 1.2em
   line-height: 1.8
@@ -70,21 +70,25 @@ h5
   font-weight: 400
   margin-bottom: $margin
 h4
-  font-family: "hk-nova-thin"
+  font-family: "hk-nova-regular"
   font-size: 2.3rem
   font-weight: 300
   margin-bottom: $margin
 h3
-  font-family: "hk-nova-bold"
+  font-family: "hk-nova-thin"
   font-size: 2.9rem
   font-weight: 300
+  margin-bottom: $margin
 h2
-  font-family: "hk-nova-thin"
+  font-family: "hk-nova-bold"
   font-size: 3.2rem
   font-weight: 300
+  margin-bottom: $margin
 h1
   font-family: "hk-nova-heavy"
   font-size: 4rem
+  margin-bottom: $margin
+  letter-spacing: -.05em
 i
   margin-right: 2rem
   margin-left: 2rem
@@ -117,10 +121,19 @@ header
   display: flex
   flex-direction: column
   justify-content: space-around
-  width: 50%
   margin: 0 auto
-  height: 85vh
-
+  padding-top: 3em
+  width: 85%
+footer
+  display: flex
+  flex-direction: column
+  justify-content: center !important
+  align-items: center
+  align-content: center
+  height: 20vh
+  margin-top: 10vw
+  color: $light
+  background-color: $dark
 // Columns
 .container
   @include container()
@@ -162,11 +175,16 @@ form
       border-width: 10px
       border-color: $main
   label.module
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
     position: relative
     padding: 1.5em
-    width: calc(34% - .1em)
+    width: 90%
     text-align: center
     border: 2px dashed $grey
+    margin-bottom: .3em
     img
       position: static
       transform: none
@@ -174,8 +192,6 @@ form
       width: 50%
     &:hover
       border: 2px dashed $main
-    & ~ label.module
-      margin-left: .9em
   input[name$="-logo"]:checked ~ .container label[for$="-logo"]
     background-color: rgba(33, 33, 33, .4)
   input[name$="-branding"]:checked ~ .container label[for$="-branding"]
@@ -189,11 +205,17 @@ form
     padding: 3rem 0
     font-size: 100%
 @media only screen and (min-width: 800px)
+  header
+    width: 65%
+    height: 85vh
+    margin-bottom: $margin
+    h1
+      font-size: 4em
   .col
     display: inline-block
   form
-    width: 75%
     margin: 0 auto
+
     label.module
       display: flex
       flex-direction: column
@@ -202,5 +224,6 @@ form
       align-content: center
       width: calc(34% - .6em)
       padding: 1em
+      margin-bottom: 0
     & ~ label.module
       margin-left: 1em

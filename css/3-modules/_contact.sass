@@ -1,5 +1,7 @@
 #contact
   position: relative
+  width: 90%
+  margin: 0  auto
   div[class*="quest"]
     flex-direction: column
     justify-content: center
@@ -12,13 +14,20 @@
     *
       opacity: 1
   label
+    display: inline-flex
     cursor: pointer
   .continue
     display: none
     animation: slideIn 0.3s backwards
     &:not(.button)
       height: 50vh
-
+  .check-container
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    align-content: center
+    input.module ~ input.module
+      margin: 0
   input[data-continue="true"]:checked
     & ~ .continue.project
       display: flex
@@ -28,9 +37,9 @@
       display: none !important
   input[name$="-hello"]:checked
     & ~ .continue.message, input[name$="-hello"]:checked ~ div .continue.message
-      display: block
+      display: flex
     & ~ div span.message
-      display: inline !important
+      display: inline-flex !important
     & ~ div span.project
       display: none !important
   .continue.questionnaire-part-1
@@ -51,7 +60,13 @@
   #contact
     position: relative
     margin: 0 auto
-    width: 66%
+    width: 65%
     .continue
       &:not(.button)
         height: 30vh
+    .check-container
+      flex-direction: row
+      flex-grow: 1
+      height: 20vh
+      label
+        height: 100%

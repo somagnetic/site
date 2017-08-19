@@ -177,7 +177,7 @@ html {
   background: #f2f2f2;
   font-family: "hk-nova-regular", "Helvetica", Arial, Verdana, sans-serif;
   font-size: 62.5%;
-  color: #3c3c3c; }
+  color: #331141; }
 
 body {
   font-size: 1.2em;
@@ -234,7 +234,7 @@ img {
 a, a:link, a:visited, a:hover, a:focus {
   transition: all ease 0.25s;
   text-decoration: none;
-  color: #e74b4c; }
+  color: #eb2441; }
 
 h2, h3, h4, h5, h6 {
   position: relative;
@@ -253,24 +253,28 @@ h5 {
   margin-bottom: 1.5rem; }
 
 h4 {
-  font-family: "hk-nova-thin";
+  font-family: "hk-nova-regular";
   font-size: 2.3rem;
   font-weight: 300;
   margin-bottom: 1.5rem; }
 
 h3 {
-  font-family: "hk-nova-bold";
+  font-family: "hk-nova-thin";
   font-size: 2.9rem;
-  font-weight: 300; }
+  font-weight: 300;
+  margin-bottom: 1.5rem; }
 
 h2 {
-  font-family: "hk-nova-thin";
+  font-family: "hk-nova-bold";
   font-size: 3.2rem;
-  font-weight: 300; }
+  font-weight: 300;
+  margin-bottom: 1.5rem; }
 
 h1 {
   font-family: "hk-nova-heavy";
-  font-size: 4rem; }
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.05em; }
 
 i {
   margin-right: 2rem;
@@ -282,7 +286,7 @@ i {
   transition: all ease 0.25s;
   display: inline-block;
   min-width: 8em;
-  background: #e74b4c;
+  background: #eb2441;
   font-size: 1.8rem;
   color: #f2f2f2;
   border: none;
@@ -293,10 +297,10 @@ i {
     background: #eee; }
 
 .button:active, .button:focus, a.button:active, a.button:focus {
-  background-color: #440909; }
+  background-color: #260309; }
 
 .button:hover, a.button:hover {
-  background-color: #9e1516; }
+  background-color: #830c1d; }
 
 .button ~ .button, a.button ~ a.button {
   margin-left: 2em;
@@ -306,9 +310,20 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 50%;
   margin: 0 auto;
-  height: 85vh; }
+  padding-top: 3em;
+  width: 85%; }
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: center;
+  align-content: center;
+  height: 20vh;
+  margin-top: 10vw;
+  color: #f2f2f2;
+  background-color: #331141; }
 
 .container {
   font-size: 0;
@@ -357,22 +372,25 @@ form input:not(.button), form textarea {
   left: 50%; }
   form input:not(.button):focus, form input:not(.button):active, form input:not(.button):hover, form textarea:focus, form textarea:active, form textarea:hover {
     border-width: 10px;
-    border-color: #e74b4c; }
+    border-color: #eb2441; }
 form label.module {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   padding: 1.5em;
-  width: calc(34% - .1em);
+  width: 90%;
   text-align: center;
-  border: 2px dashed #3c3c3c; }
+  border: 2px dashed #3c3c3c;
+  margin-bottom: 0.3em; }
   form label.module img {
     position: static;
     transform: none;
     left: auto;
     width: 50%; }
   form label.module:hover {
-    border: 2px dashed #e74b4c; }
-  form label.module ~ label.module {
-    margin-left: 0.9em; }
+    border: 2px dashed #eb2441; }
 form input[name$="-logo"]:checked ~ .container label[for$="-logo"] {
   background-color: rgba(33, 33, 33, 0.4); }
 form input[name$="-branding"]:checked ~ .container label[for$="-branding"] {
@@ -387,11 +405,17 @@ form .container {
   font-size: 100%; }
 
 @media only screen and (min-width: 800px) {
+  header {
+    width: 65%;
+    height: 85vh;
+    margin-bottom: 1.5rem; }
+    header h1 {
+      font-size: 4em; }
+
   .col {
     display: inline-block; }
 
   form {
-    width: 75%;
     margin: 0 auto; }
     form label.module {
       display: flex;
@@ -400,11 +424,14 @@ form .container {
       align-items: center;
       align-content: center;
       width: calc(34% - .6em);
-      padding: 1em; }
+      padding: 1em;
+      margin-bottom: 0; }
     form ~ label.module {
       margin-left: 1em; } }
 #contact {
-  position: relative; }
+  position: relative;
+  width: 90%;
+  margin: 0 auto; }
   #contact div[class*="quest"] {
     flex-direction: column;
     justify-content: center;
@@ -416,12 +443,20 @@ form .container {
   #contact div.in-center * {
     opacity: 1; }
   #contact label {
+    display: inline-flex;
     cursor: pointer; }
   #contact .continue {
     display: none;
     animation: slideIn 0.3s backwards; }
     #contact .continue:not(.button) {
       height: 50vh; }
+  #contact .check-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center; }
+    #contact .check-container input.module ~ input.module {
+      margin: 0; }
   #contact input[data-continue="true"]:checked ~ .continue.project {
     display: flex; }
   #contact input[data-continue="true"]:checked ~ div span.hidden {
@@ -429,14 +464,14 @@ form .container {
   #contact input[data-continue="true"]:checked ~ div span.message {
     display: none !important; }
   #contact input[name$="-hello"]:checked ~ .continue.message, #contact input[name$="-hello"]:checked input[name$="-hello"]:checked ~ div .continue.message {
-    display: block; }
+    display: flex; }
   #contact input[name$="-hello"]:checked ~ div span.message {
-    display: inline !important; }
+    display: inline-flex !important; }
   #contact input[name$="-hello"]:checked ~ div span.project {
     display: none !important; }
   #contact .continue.questionnaire-part-1 {
     height: auto;
-    color: #e74b4c; }
+    color: #eb2441; }
   #contact .project .enter:focus, #contact .project .enter:hover {
     opacity: 1; }
     #contact .project .enter:focus + h6, #contact .project .enter:hover + h6 {
@@ -475,8 +510,14 @@ form .container {
   #contact {
     position: relative;
     margin: 0 auto;
-    width: 66%; }
+    width: 65%; }
     #contact .continue:not(.button) {
-      height: 30vh; } }
+      height: 30vh; }
+    #contact .check-container {
+      flex-direction: row;
+      flex-grow: 1;
+      height: 20vh; }
+      #contact .check-container label {
+        height: 100%; } }
 
 /*# sourceMappingURL=master.css.map */
