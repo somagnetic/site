@@ -25,10 +25,10 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@itssomagnetic" />
     <meta name="twitter:creator" content="@itssomagnetic" />
-    <meta name="twitter:url" content="https://compassofdesign.com" />
+    <meta name="twitter:url" content="https://somagnetic.com" />
     <meta name="twitter:title" content="{{page.title}}" />
     <meta name="twitter:description" content="{{page.description | truncate: 196}}" />
-    <meta name="twitter:image" content="{% if page.cdn %}{{page.cdn}}{% elsif page.index_image %}https://compassofdesign.com{{page.index_image}}{% else %}https://compassofdesign.com/assets/img/index.jpg{% endif %}" />
+    <meta name="twitter:image" content="{% if page.cdn %}{{page.cdn}}{% elsif page.index_image %}https://somagnetic.com{{page.index_image}}{% else %}https://somagnetic.com/assets/img/index.jpg{% endif %}" />
 
     <meta name="p:domain_verify" content="4990647bc88b5df93fc24e07f254d0a9"/>
 
@@ -44,6 +44,13 @@
   </head>
   <body>
     {{content}}
+  <footer>
+    <form action="https://formspree.io/mojyezbx" method="POST">
+    {% include contact.html %}
+    </form>
+  </footer>
+  <script type="text/javascript" src="{{site.baseurl}}/scripts/scripts.js">
+
+  </script>
   </body>
 </html>
-  

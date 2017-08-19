@@ -5,7 +5,7 @@
   padding: 0
 html
   background: $light
-  font-family: sans-serif
+  font-family: 'hk-nova-regular', "Helvetica", Arial, Verdana, sans-serif
   font-size: 62.5%
   color: $grey
 body
@@ -17,6 +17,7 @@ body
     font-size: 1.6rem
   @media only screen and (min-width: 800px)
     font-size: 1.8rem
+    background: #fff
 .hidden
   display: none !important
   opacity: 0
@@ -40,7 +41,8 @@ body
   clear: both
 .cf::after, .cf::before
   display: block
-
+img
+  height: 100%
 // Animations
 .transition
   transition: all ease .3s
@@ -58,26 +60,31 @@ h2, h3, h4, h5, h6
   position: relative
   width: fit-content
 h6
+  font-family: "hk-nova-regular"
   font-size: 1.8rem
   font-weight: 400
   margin-bottom: $margin
 h5
+  font-family: "hk-nova-regular"
   font-size: 2rem
   font-weight: 400
   margin-bottom: $margin
 h4
+  font-family: "hk-nova-thin"
   font-size: 2.3rem
   font-weight: 300
   margin-bottom: $margin
 h3
+  font-family: "hk-nova-bold"
   font-size: 2.9rem
   font-weight: 300
 h2
+  font-family: "hk-nova-thin"
   font-size: 3.2rem
   font-weight: 300
 h1
+  font-family: "hk-nova-heavy"
   font-size: 4rem
-  font-weight: 500
 i
   margin-right: 2rem
   margin-left: 2rem
@@ -105,14 +112,21 @@ i
 .button ~ .button,a.button ~ a.button
   margin-left: 2em
   margin-right: 0
-
 // Scaffolding
+header
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  width: 50%
+  margin: 0 auto
+  height: 85vh
 
 // Columns
 .container
   @include container()
   img
     @include center(true, false)
+  justify-content: space-between
 .container .row
   position: inherit
   display: inline-block
@@ -131,12 +145,61 @@ i
 
 
 // Forms
-
+form
+  input:not(.button), textarea,
+    width: 100%
+    margin-bottom: 1.2em
+    padding: .5em 2em
+    background: none
+    border: 2px solid $grey
+    border-top: 0
+    border-bottom: 0
+    transition: $transition
+    outline: none
+    text-align: center
+    @include center(true, false)
+    &:focus, &:active, &:hover
+      border-width: 10px
+      border-color: $main
+  label.module
+    position: relative
+    padding: 1.5em
+    width: calc(34% - .1em)
+    text-align: center
+    border: 2px dashed $grey
+    img
+      position: static
+      transform: none
+      left: auto
+      width: 50%
+    &:hover
+      border: 2px dashed $main
+    & ~ label.module
+      margin-left: .9em
+  input[name$="-logo"]:checked ~ .container label[for$="-logo"]
+    background-color: rgba(33, 33, 33, .4)
+  input[name$="-branding"]:checked ~ .container label[for$="-branding"]
+    background-color: rgba(33, 33, 33, .4)
+  input[name$="-ux"]:checked ~ .container label[for$="-ux"]
+    background-color: rgba(33, 33, 33, .4)
+  input[name$="-hello"]:checked ~ .container label[for$="-hello"]
+    background-color: rgba(33, 33, 33, .4)
+  .container
+    display: flex
+    padding: 3rem 0
+    font-size: 100%
 @media only screen and (min-width: 800px)
   .col
     display: inline-block
   form
+    width: 75%
+    margin: 0 auto
     label.module
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      align-content: center
       width: calc(34% - .6em)
       padding: 1em
     & ~ label.module
