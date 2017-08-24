@@ -69,7 +69,7 @@ $(document).ready(function(){
   	        window.location.hash = target;
   	    });
   	});
-var animationDelay = 3000;
+var animationDelay = 3500;
 
 animateHeadline($('.cd-headline'));
 
