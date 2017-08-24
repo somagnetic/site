@@ -41,8 +41,19 @@
     <meta property="og:site_name" content="So Magnetic" />
     <meta property="og:locale" content="en_US" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
+  <nav class="container nav">
+    <article class="row">
+      <div class="module">
+        <img src="{{site.baseurl}}/assets/img/sm-icon.svg" alt="So Magnetic, LLC icon design for branding design services" />
+      </div>
+      <div class="module">
+        <a href="#start" class="button">Get Started</a>
+      </div>
+    </article>
+  </nav>
     {{content}}
 
   {%if page.url contains "continue"%}{%else%}{% include contact.html %}{%endif%}
@@ -51,7 +62,8 @@
         <a href="https://twitter.com/itssomagnetic"><i class="fa fa-twitter module"><span class="hidden">twitter</span></i></a> |
         <a href="https://dribbble.com/somagnetic"><i class="fa fa-dribbble module"><span class="hidden">dribbble</span></i></a> |
         <a href="https://instagram.com/itssomagnetic"><i class="fa fa-instagram module"><span class="hidden">instagram</span></i></a> </h3>
-        <h4>&copy; So Magnetic LLC</h4>
+        <h4><img src="{{site.baseurl}}/assets/img/expanded-sm-logo.svg" alt=""></h4>
+        <h6>&copy; So Magnetic LLC</h6>
   </footer>
   <script type="text/javascript" src="{{site.baseurl}}/scripts/scripts.js">
   </script>

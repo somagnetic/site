@@ -1,0 +1,16 @@
+.push .cd-words-wrapper
+  position: relative
+  display: inline-block
+  perspective: 300px
+  b
+    opacity: 0
+    display: inline-block
+    position: absolute
+    top: 0
+    left: 0
+    &.is-visible
+      opacity: 1
+      animation: push-in 0.6s
+      position: relative
+    &.is-hidden
+      animation: push-out 0.6s

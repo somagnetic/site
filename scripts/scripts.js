@@ -11,70 +11,6 @@ function forEach(list, callback) {
   }
 }
 //smooth scroll-behavior
-var toggler = byId('nav-toggler'),
-    scrollBtn = byClass('scrollBtn'),
-    targetOffset, currentPosition,
-    body = document.body,
-    animateTime = 000;
-var isOpera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-    if(!!window.chrome && !isOpera )
-    { animateTime = 900;
-    }
-
-// get the y offset
-function getPageScroll() {
-  var yScroll;
-  if (window.pageYOffset) {
-    yScroll = window.pageYOffset;
-  } else if (document.documentElement && document.documentElement.scrollTop) {
-    yScroll = document.documentElement.scrollTop;
-  } else if (document.body) { //last resort
-    yScroll = document.body.scrollTop;
-  }
-  return yScroll;
-}
-function smoothSroll(event) {
-  if(!event) {
-    event = window.event;
-  }
-  var target = event.target;
-  console.log(event.target);
-  targetOffset = byId(target.dataset.href.substr(1)).offsetTop;
-  currentPosition = getPageScroll(); // uses yScroll's value
-
-  // accounting for hidden-nav
-  if (toggler.checked && window.innerWidth < 1000){
-    targetOffset = targetOffset ;
-    currentPosition = currentPosition;
-  } else if(toggler.checked){
-    targetOffset = targetOffset;
-    currentPosition = currentPosition;
-  }
-  body.classList.add('in-transition');
-  if (targetOffset < currentPosition) {
-    body.style.WebitTransform = "translate(0, " + (currentPosition - targetOffset) + "px)";
-    body.style.MozTransform = "translate(0, " + (currentPosition - targetOffset) + "px)";
-    body.style.transform = "translate(0, " + (currentPosition - targetOffset) + "px)";
-  } else {
-    body.style.WebitTransform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
-    body.style.MozTransform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
-    body.style.transform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
-  }
-
-
-  window.setTimeout(function () {
-    body.classList.remove('in-transition');
-    body.style.cssText = "";
-    window.scrollTo(0, targetOffset);
-  }, animateTime);
-
-  event.preventDefault();
-}
-for (var i = 0; i < scrollBtn.length; i++){
-scrollBtn[i].addEventListener('click', function(event) {
-    smoothSroll(event);
-  }, false);
-}
 
 //questionnaire
 var question = byClass('continue');
@@ -118,3 +54,47 @@ function checked() {
     )
   }
 }
+// Rotating title animations
+$(document).ready(function(){
+  // Smoothscroll
+  $('a[href^="#"]').on('click',function (e) {
+  	    e.preventDefault();
+
+  	    var target = this.hash;
+  	    var $target = $(target);
+
+  	    $('html, body').stop().animate({
+  	        'scrollTop': $target.offset().top
+  	    }, 700, 'swing', function () {
+  	        window.location.hash = target;
+  	    });
+  	});
+var animationDelay = 3000;
+
+animateHeadline($('.cd-headline'));
+
+function animateHeadline($headlines) {
+	$headlines.each(function(){
+		var headline = $(this);
+		//trigger animation
+		setTimeout(function(){ hideWord( headline.find('.is-visible') ) }, animationDelay);
+		//other checks here ...
+	});
+}
+
+function hideWord($word) {
+	var nextWord = takeNext($word);
+	switchWord($word, nextWord);
+	setTimeout(function(){ hideWord(nextWord) }, animationDelay);
+}
+
+function takeNext($word) {
+	return (!$word.is(':last-child')) ? $word.next() : $word.parent().children().eq(0);
+}
+
+function switchWord($oldWord, $newWord) {
+	$oldWord.removeClass('is-visible').addClass('is-hidden');
+	$newWord.removeClass('is-hidden').addClass('is-visible');
+}
+
+});
