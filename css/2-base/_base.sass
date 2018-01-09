@@ -1,0 +1,283 @@
+// Global
+*, *::before, *::after
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+html
+  font-family: 'hk-nova-regular', "Helvetica", Arial, Verdana, sans-serif
+  font-size: 2vw
+  @media only screen and (min-width: 200px)
+    font-size: 2.5vw
+  @media only screen and (min-width: 800px)
+    font-size: .7vw
+  color: $dark
+body
+  background: $light
+  line-height: 1.8
+  opacity: 0
+  transition: all ease .4s
+#no
+  pointer-events: none
+.hidden
+  display: none !important
+  opacity: 0
+.mobile
+  display: block
+  opacity: 1
+  @media only screen and (min-width: 800px)
+    display: none
+    opacity: 0
+.desktop
+  display: none
+  opacity: 0
+  @media only screen and (min-width: 800px)
+    display: block
+    opacity: 1
+.cf::after
+  content: ' '
+  visibility: hidden
+  display: block
+  height: 0
+  clear: both
+.cf::after, .cf::before
+  display: block
+img
+  width: 100%
+// Animations
+.transition
+  transition: all ease .3s
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+body.main
+  animation: fadeIn 1.5s
+  opacity: 1
+// Logo & nav
+nav
+  img
+    width: 15vw
+// Typography
+a, a:link, a:visited, a:hover, a:focus
+  transition: $transition
+  text-decoration: none
+  color: $main
+h2, h3, h4, h5, h6
+  position: relative
+  width: fit-content
+h6
+  font-family: "hk-nova-regular"
+  font-size: 1.8rem
+  font-weight: 400
+  margin-bottom: $margin
+h5
+  font-family: "hk-nova-regular"
+  font-size: 2rem
+  font-weight: 400
+  margin-bottom: $margin
+h4
+  font-family: "hk-nova-regular"
+  font-size: 2.3rem
+  font-weight: 300
+  margin-bottom: $margin
+  color: $main
+h3
+  font-family: "hk-nova-bold"
+  font-size: 2.5rem
+  font-weight: 300
+  margin-bottom: $margin
+  color: $main
+h2
+  font-family: "hk-nova-bold"
+  font-size: 3.2rem
+  font-weight: 300
+  margin-bottom: $margin
+h1
+  font-family: "hk-nova-heavy"
+  font-size: 3.5rem
+  margin-bottom: $margin
+  letter-spacing: -.05em
+i
+  margin-right: 2rem
+  margin-left: 2rem
+  span
+    display: none
+.word-highlight
+  color: $main
+// Buttons
+.button, a.button
+  transition: $transition
+  display: inline-block
+  min-width: 8em
+  background: $highlight-3
+  font-size: 1.8rem
+  color: $light
+  border: none
+  border-radius: 8px
+  padding: 1em
+  &.secondary
+    background: $secondary
+  &.tertiary
+    background: $tertiary
+.button:active, .button:focus,a.button:active, a.button:focus
+  background-color: darken($highlight-3, 45%)
+.button:hover, a.button:hover
+  background-color: darken($highlight-3, 25%)
+.button ~ .button,a.button ~ a.button
+  margin-left: 2em
+  margin-right: 0
+// Scaffolding
+.container
+  @include container()
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+  background: $light
+  .row
+    width: 90%
+    position: inherit
+    display: inline-block
+header
+  display: flex
+  flex-direction: column
+  padding: 10vh 3vw
+  overflow: hidden
+  height: 70vh
+  h1
+    line-height: 1.5
+    font-size: calc(11vw)
+footer
+  display: flex
+  flex-direction: column
+  justify-content: center !important
+  align-items: center
+  align-content: center
+  height: 20vh
+  padding-top: 20rem
+  color: $dark
+// Columns
+
+
+// Forms
+form
+  input:not(.button), textarea,
+    width: 100%
+    margin-bottom: 1.2em
+    padding: .5em 2em
+    background: none
+    border: 2px solid $highlight-3
+    color: $highlight-3
+    border-top: 0
+    border-bottom: 0
+    transition: $transition
+    outline: none
+    text-align: center
+    @include center(true, false)
+    &:focus, &:active, &:hover
+      border-width: 10px
+      border-color: $highlight-3
+  label.module
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: relative
+    padding: 1.5em
+    width: 90%
+    text-align: center
+    border: 2px solid $highlight-3
+    color: $highlight-3
+    border-radius: 10px
+    margin-bottom: .3em
+    transition: $transition
+    img
+      position: static
+      transform: none
+      left: auto
+      width: 50%
+    &:hover
+      border: 2px dashed $highlight-3
+      color: $highlight-3
+  input[name$="-logo"]:checked ~ .container label[for$="-logo"]
+    background-color: $highlight-3
+    color: $light
+  input[name$="-branding"]:checked ~ .container label[for$="-branding"]
+    background-color: $highlight-3
+    color: $light
+  input[name$="-audit"]:checked ~ .container label[for$="-audit"]
+    background-color: $highlight-3
+    color: $light
+  input[name$="-hello"]:checked ~ .container label[for$="-hello"]
+    background-color: $highlight-3
+    color: $light
+  input[id$="size-1"]:checked ~ .container label[for$="size-1"]
+    background-color: $highlight-3
+    color: $light
+  input[id$="size-2"]:checked ~ .container label[for$="size-2"]
+    background-color: $highlight-3
+    color: $light
+  input[id$="size-3"]:checked ~ .container label[for$="size-3"]
+    background-color: $highlight-3
+    color: $light
+  input[id$="size-4"]:checked ~ .container label[for$="size-4"]
+    background-color: $highlight-3
+    color: $light
+  input[id$="-before-1"]:checked ~ .container label[for$="before-1"]
+    background-color: $highlight-3
+    color: $light
+  input[id$="-before-2"]:checked ~ .container label[for$="before-2"]
+    background-color: $highlight-3
+    color: $light
+  .container
+    display: flex
+    padding: 3rem 0
+    font-size: 100%
+@media only screen and (min-width: 800px)
+  .container
+    width: 100%
+    .row
+      width: 60%
+      margin: 0 auto
+  nav
+    position: sticky
+    width: 97vw
+    padding: 0
+    @include center(true,false)
+    .row
+      justify-content: space-between
+      margin: 0
+      .module
+        width: 20%
+    img
+      width: 4vw
+  header.container
+    margin-bottom: 3em
+    height: 70vh
+    .row
+      width: 85%
+    h1
+      margin-top: -.5rem
+      font-size: 5.3vw
+      line-height: 1.05
+
+  .col
+    display: inline-block
+  form
+    margin: 0 auto
+
+    label.module
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      align-content: center
+      width: calc(34% - .6em)
+      padding: 1em
+      margin-bottom: 0
+      &.four
+        width: 24%
+    & ~ label.module
+      margin-left: 1em

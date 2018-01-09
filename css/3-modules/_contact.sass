@@ -1,0 +1,83 @@
+#contact
+  position: relative
+  width: 90%
+  margin: 0  auto
+  margin-top: 5rem
+  div[class*="quest"]
+    flex-direction: column
+    justify-content: center
+    margin-bottom: .3em
+    padding: .5em
+    transition: $transition
+    & *
+      opacity: .3
+  div.in-center
+    *
+      opacity: 1
+  label
+    display: inline-flex
+    cursor: pointer
+    ~ label
+      margin-left: 2.5%
+  .continue
+    display: none
+    animation: slideIn 0.3s backwards
+    &:not(.button)
+      height: 50vh
+  .check-container
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    align-content: center
+    input.module ~ input.module
+      margin: 0
+  input[data-continue="true"]:checked
+    & ~ .continue.project
+      display: flex
+    & ~ div span.hidden
+      display: inline-flex !important
+    & ~ div span.message
+      display: none !important
+  input[name$="-hello"]:checked
+    & ~ .continue.message, input[name$="-hello"]:checked ~ div .continue.message
+      display: flex
+    & ~ div span.message
+      display: inline-flex !important
+    & ~ div span.project
+      display: none !important
+  .continue.questionnaire-part-1
+    height: auto
+    color: $main
+  .continue.questionnaire-part-6
+    input[type="checkbox"]
+      width: auto
+      transform: none
+      position: static
+    label
+      height: 10vh
+  .project
+    .enter
+      &:focus, &:hover
+        opacity: 1
+        & + h6
+          opacity: 1
+      &:last-child
+        order: -1
+@for $i from 1 through 9
+  #contact .contact .continue.questionnaire-part-#{$i}
+    animation-delay: ($i/5)+s
+@media only screen and (min-width: 800px)
+  #contact
+    position: relative
+    margin: 0 auto
+    width: 60%
+    .continue
+      &:not(.button)
+        height: 30vh
+    .check-container
+      flex-direction: row
+      flex-grow: 1
+      height: 20vh
+      width: 100%
+      label
+        height: 100%
