@@ -1,0 +1,52 @@
+---
+layout: default
+title: Give a testimonial about your experience or provide feedback
+description:
+---
+<header class="container hero hero-index" id="hero">
+  <article class="row hero-inset">
+    <img src="/assets/img/cod-logo.svg" alt="Compass of Design is created by So Magnetic as a tool for designers to learn how to overcome imposter syndrome and learn to design with confidence." />
+
+  </article>
+</header>
+<section class="main container">
+  <article class="row">
+    <div class="landing module">
+      <h1>Testimonial</h1>
+      <h3> How has the community experience been for you?</h3>
+    </div>
+  </article>
+</section>
+<section class="main container">
+  <article class="row">
+    <div class="module ">
+      <p>I'm always looking for ways to improve the community and get feedback on the experience here. What has been valuable to you, being a member of the community? </p><p>Also, I would love to be able to feature you and your work to help you out. If you have a few minutes, it would mean a great deal to me to hear about your experience!</p>
+      <form action="https://formspree.io/mjynaglx" method="POST" class="signup">
+        <input type="hidden" name="Testimonial" value="New testmonial from /Testimonial">
+        <input type="text" name="_gotcha" style="display: none">
+        <label for="form-name">Full Name</label>
+        <input id="form-firstname" type="text" name="_FirstName" placeholder="First Name" required="true"><input id="form-lastname" type="text" name="_LastName" placeholder="Last Name" required="true">
+        <label for="form-email">Email</label>
+
+        <p><small>*required in case I need to follow up. Your email will never be shared.</small></p>
+        <input id="form-email" type="text" name="_Email" placeholder="Email.">
+        <label for="form-backlink">If you would like me to leave a link back to your profile or work, put that in here.</label>
+        <p><small>*optional in order to give credit and help give a shouout to your work (: </small></p>
+        <input id="form-backlink" type="text" name="_backlink" placeholder="A link to you, your work, etc." >
+        <label for="form-message">What would you say to someone considering to join the community?</label>
+        <p><small>*Did you have any initial hesitations? How has that changed by being here? </small></p>
+        <p><small>What has been the most valuable to you in the community so far? </small></p>
+        <textarea id="form-message" rows="15" name="Message" required="true"></textarea>
+        <h4>Permission</h4>
+        <p><small>*Do you grant permission for Compass of Design to use any or all of your feedback in publicly displayed testimonials, marketing, and/or promotion?</small></p>
+
+         <input id="form-yes" name="_permission" type="radio" value="I grant permission for this feedback to be shared publicly" checked="checked" class="radio-button"></input><label for="form-yes" class="radio-label">I grant permission for this feedback to be shared publicly.</label><br />
+         <input id="form-no" name="_permission" type="radio" value="No, I only want this to be used for internal feedback" class="radio-button"></input><label for="form-no" class="radio-label">No. I just want this to be for internal feedback.</label>
+
+        <br /> <br />
+        <input type="hidden" name="_next" value="{{site.baseurl}}/form" />
+        <button class="button" type="submit">Send</button>
+      </form>
+    </div>
+  </article>
+</section>
