@@ -16,8 +16,6 @@ body
   line-height: 1.8
   opacity: 0
   transition: all ease .4s
-#no
-  pointer-events: none
 .hidden
   display: none !important
   opacity: 0
@@ -54,10 +52,6 @@ img
 body.main
   animation: fadeIn 1.5s
   opacity: 1
-// Logo & nav
-nav
-  img
-    width: 15vw
 // Typography
 a, a:link, a:visited, a:hover, a:focus
   transition: $transition
@@ -111,7 +105,8 @@ i
   display: inline-block
   min-width: 8em
   background: $highlight-3
-  font-size: 1.8rem
+  font-size: 1.3rem
+  text-align: center
   color: $light
   border: none
   border-radius: 8px
@@ -119,14 +114,21 @@ i
   &.secondary
     background: $secondary
   &.tertiary
-    background: $tertiary
+    background: $light
+    color: $main
+    font-size: 1.5rem
+    &:hover, &:focus, &:active
+      background-color:  darken($light, 15%)
 .button:active, .button:focus,a.button:active, a.button:focus
   background-color: darken($highlight-3, 45%)
+  color: light
 .button:hover, a.button:hover
   background-color: darken($highlight-3, 25%)
+  color: light
 .button ~ .button,a.button ~ a.button
   margin-left: 2em
   margin-right: 0
+
 // Scaffolding
 .container
   @include container()
@@ -135,20 +137,42 @@ i
   justify-content: flex-start
   align-items: center
   width: 100%
-  background: $light
   .row
     width: 90%
-    position: inherit
-    display: inline-block
+// Logo & nav
+nav.container
+  color: $dark
+  padding: 2rem
+  margin: 2rem 0 0 0
+  .row
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    .module
+      position: relative
+      right: 0
+      width: 50%
+      font-size: 1.7rem
+      display: inline-flex
+      justify-content: space-between
+  ul
+    li
+      display: inline-block
+      list-style: none
+      padding: 1em
+  img
+    width: 3vw
+
 header
   display: flex
   flex-direction: column
   padding: 10vh 3vw
   overflow: hidden
-  height: 70vh
+  height: 90vh
   h1
     line-height: 1.5
-    font-size: calc(11vw)
+    font-size: calc(18vw)
 footer
   display: flex
   flex-direction: column
@@ -236,23 +260,22 @@ form
     padding: 3rem 0
     font-size: 100%
 @media only screen and (min-width: 800px)
-  .container
-    width: 100%
+  nav.container
+    margin: 2rem 0 0 0
     .row
-      width: 60%
-      margin: 0 auto
-  nav
-    position: sticky
-    width: 97vw
-    padding: 0
-    @include center(true,false)
-    .row
+      display: flex
       justify-content: space-between
-      margin: 0
+      align-items: center
+
       .module
-        width: 20%
+        position: relative
+        right: 0
+
+    ul
+      li
+
     img
-      width: 4vw
+
   header.container
     margin-bottom: 3em
     height: 70vh
@@ -262,12 +285,8 @@ form
       margin-top: -.5rem
       font-size: 5.3vw
       line-height: 1.05
-
-  .col
-    display: inline-block
   form
     margin: 0 auto
-
     label.module
       display: flex
       flex-direction: column
