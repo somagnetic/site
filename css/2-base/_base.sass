@@ -138,42 +138,50 @@ i
   align-items: center
   width: 100%
   .row
-    width: 82%
+    width: 90%
+    font-size: 1.3rem
+
 // Logo & nav
 nav.container
+  position: fixed
+  top: 0
+  left: 0
   color: $dark
-  padding: 2rem
-  margin: 2rem 0 0 0
+  padding: 1rem
+  padding: .5rem 0 2.5rem 0
   z-index: 1000
+  width: 100%
   .row
     display: flex
     justify-content: space-between
     align-items: center
-
+    align-content: flex-start
+    padding: 1rem 0
     .module
       position: relative
       right: 0
-      width: 50%
-      font-size: 1.7rem
+      font-size: 1rem
       display: inline-flex
       justify-content: space-between
   ul
     li
       display: inline-block
       list-style: none
-      padding: 1em
+      padding: 1rem
+
   img
-    width: 3vw
+    width: 10vw
 
 header
   display: flex
   flex-direction: column
-  padding: 10vh 3vw
+  margin: 15vh 0 0
+  padding: 4 3vw
   overflow: hidden
-  height: 90vh
+  height: 80vh
   h1
     line-height: 1.5
-    font-size: calc(18vw)
+    font-size: 3.6rem
 footer
   display: flex
   flex-direction: column
@@ -193,7 +201,7 @@ form
     margin-bottom: 1.2em
     padding: .5em 2em
     background: none
-    border: 2px solid $dark
+    border: 1rem solid $dark
     color: $dark
     border-top: 0
     border-bottom: 0
@@ -202,7 +210,7 @@ form
     text-align: center
     @include center(true, false)
     &:focus, &:active, &:hover
-      border-width: 2rem
+      border-width: 2.5rem
       border-color: $dark
   label.module
     display: flex
@@ -213,7 +221,7 @@ form
     padding: 1.5em
     width: 90%
     text-align: center
-    border: 1rem solid $dark
+    border: .6rem solid $dark
     color: $dark
     border-radius: 10px
     margin-bottom: .3em
@@ -224,68 +232,75 @@ form
       left: auto
       width: 50%
     &:hover
-      border: 1rem dashed $highlight-2
-      color: $highlight-2
+      border: .6rem dashed $dark
+      color: $dark
   input[name$="-logo"]:checked ~ .container label[for$="-logo"]
-    background-color: $highlight-2
-    border-color: $highlight-2
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[name$="-branding"]:checked ~ .container label[for$="-branding"]
-    background-color: $highlight-2
-    border-color: $highlight-2
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[name$="-audit"]:checked ~ .container label[for$="-audit"]
-    background-color: $highlight-2
-    border-color: $highlight-2
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[name$="-hello"]:checked ~ .container label[for$="-hello"]
-    background-color: $highlight-2
-    border-color: $highlight-2
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[id$="size-1"]:checked ~ .container label[for$="size-1"]
-    background-color: $highlight-2
-    border-color: $highlight-2
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[id$="size-2"]:checked ~ .container label[for$="size-2"]
-    background-color: $highlight-2
-    border-color: $highlight-2
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[id$="size-3"]:checked ~ .container label[for$="size-3"]
-    background-color: $highlight-2
-    border-color: $highlight-2
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[id$="size-4"]:checked ~ .container label[for$="size-4"]
-    background-color: $highlight-2
-    border-color: $highlight-2
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[id$="-before-1"]:checked ~ .container label[for$="before-1"]
-    background-color: $highlight-2
-    border-color: $highlight-2
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[id$="-before-2"]:checked ~ .container label[for$="before-2"]
-    background-color: $highlight-2
-    border-color: $highlight-2
+    background-color: $dark
+    border-color: $dark
     color: $light
   .container
     display: flex
     padding: 3rem 0
     font-size: 100%
 @media only screen and (min-width: 800px)
+  .container
+    .row
+      width: 82%
   nav.container
     margin: 2rem 0 0 0
+    background: none
+    img
+      width: 3vw
     .row
       display: flex
       justify-content: space-between
       align-items: center
-
       .module
         position: relative
         right: 0
-
-
+        font-size: 2rem
+        width: 50%
+        font-size: 2rem
   header.container
-    margin-bottom: 3em
+    margin: 3rem 0
     height: 70vh
+    top: 15vh
     .row
       width: 85%
     h1

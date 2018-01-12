@@ -2,13 +2,18 @@
   width: 100vw
   height: 100vh
   position: fixed
+  z-index: 1
   top: 0
   left: 0
+  pointer-events: none
+.shape-overlays.is-opened
+  pointer-events: auto
+  z-index: 2
 .shape-overlays
   path:nth-of-type(1)
     fill: #323149
   path:nth-of-type(2)
-    fill: #363149
+    fill: lighten($dark, 2%)
   path:nth-of-type(3)
     fill: #fcfcfc
 .demo-1

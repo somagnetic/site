@@ -8,6 +8,7 @@
   transform: translateX(-50%)
   font-size: 1.7rem
   color: $dark
+  z-index: 3
   .row
     width: 100%
   div[class*="quest"]
@@ -24,8 +25,6 @@
   label
     display: inline-flex
     cursor: pointer
-    ~ label
-      margin-left: 2.5%
   .continue
     display: none
     animation: slideIn 0.3s backwards
@@ -74,6 +73,7 @@
   #contact .contact .continue.questionnaire-part-#{$i}
     animation-delay: ($i/5)+s
 @media only screen and (min-width: 800px)
+
   #contact
     width: 60%
     .continue
@@ -86,3 +86,6 @@
       width: 100%
       label
         height: 100%
+    label
+      ~ label
+        margin-left: 2.5%
