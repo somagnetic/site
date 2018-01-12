@@ -185,6 +185,7 @@ class ShapeOverlays {
 }
 
 (function() {
+
   const elmHamburger = document.querySelectorAll('.toggle');
   const gNavItems = document.querySelectorAll('.navItem');
   const elmOverlay = document.querySelector('.shape-overlays');
@@ -193,11 +194,13 @@ class ShapeOverlays {
   elmHamburger.forEach( function(item, elemFun){
     item.addEventListener('click', () => {
     let e = event.target;
+
     if (overlay.isAnimating) {
       return false;
     }
     overlay.toggle();
     if (overlay.isOpened === true) {
+
       // document.body.scrollTop = document.documentElement.scrollTop = 0;
       item.classList.add('is-opened-navi');
       for (var i = 0; i < gNavItems.length; i++) {
@@ -206,11 +209,13 @@ class ShapeOverlays {
       }
     } else {
       item.classList.remove('is-opened-navi');
+
       for (var i = 0; i < gNavItems.length; i++) {
         gNavItems[i].classList.remove('is-opened');
       }
     }
   });
+
 });
 }());
 $(document).ready(function(){
@@ -224,3 +229,4 @@ $(document).ready(function(){
 	});
 
 });
+
