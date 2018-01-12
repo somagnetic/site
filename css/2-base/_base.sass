@@ -183,7 +183,7 @@ footer
   height: 20vh
   padding-top: 20rem
   color: $dark
-// Columns
+// Grid Columns
 
 
 // Forms
@@ -193,8 +193,8 @@ form
     margin-bottom: 1.2em
     padding: .5em 2em
     background: none
-    border: 2px solid $highlight-3
-    color: $highlight-3
+    border: 2px solid $dark
+    color: $dark
     border-top: 0
     border-bottom: 0
     transition: $transition
@@ -202,8 +202,8 @@ form
     text-align: center
     @include center(true, false)
     &:focus, &:active, &:hover
-      border-width: 10px
-      border-color: $highlight-3
+      border-width: 2rem
+      border-color: $dark
   label.module
     display: flex
     flex-direction: column
@@ -213,8 +213,8 @@ form
     padding: 1.5em
     width: 90%
     text-align: center
-    border: 2px solid $highlight-3
-    color: $highlight-3
+    border: 1rem solid $dark
+    color: $dark
     border-radius: 10px
     margin-bottom: .3em
     transition: $transition
@@ -224,37 +224,47 @@ form
       left: auto
       width: 50%
     &:hover
-      border: 2px dashed $highlight-3
-      color: $highlight-3
+      border: 1rem dashed $highlight-2
+      color: $highlight-2
   input[name$="-logo"]:checked ~ .container label[for$="-logo"]
-    background-color: $highlight-3
+    background-color: $highlight-2
+    border-color: $highlight-2
     color: $light
   input[name$="-branding"]:checked ~ .container label[for$="-branding"]
-    background-color: $highlight-3
+    background-color: $highlight-2
+    border-color: $highlight-2
     color: $light
   input[name$="-audit"]:checked ~ .container label[for$="-audit"]
-    background-color: $highlight-3
+    background-color: $highlight-2
+    border-color: $highlight-2
     color: $light
   input[name$="-hello"]:checked ~ .container label[for$="-hello"]
-    background-color: $highlight-3
+    background-color: $highlight-2
+    border-color: $highlight-2
     color: $light
   input[id$="size-1"]:checked ~ .container label[for$="size-1"]
-    background-color: $highlight-3
+    background-color: $highlight-2
+    border-color: $highlight-2
     color: $light
   input[id$="size-2"]:checked ~ .container label[for$="size-2"]
-    background-color: $highlight-3
+    background-color: $highlight-2
+    border-color: $highlight-2
     color: $light
   input[id$="size-3"]:checked ~ .container label[for$="size-3"]
-    background-color: $highlight-3
+    background-color: $highlight-2
+    border-color: $highlight-2
     color: $light
   input[id$="size-4"]:checked ~ .container label[for$="size-4"]
-    background-color: $highlight-3
+    background-color: $highlight-2
+    border-color: $highlight-2
     color: $light
   input[id$="-before-1"]:checked ~ .container label[for$="before-1"]
-    background-color: $highlight-3
+    background-color: $highlight-2
+    border-color: $highlight-2
     color: $light
   input[id$="-before-2"]:checked ~ .container label[for$="before-2"]
-    background-color: $highlight-3
+    background-color: $highlight-2
+    border-color: $highlight-2
     color: $light
   .container
     display: flex
