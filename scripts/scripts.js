@@ -185,12 +185,13 @@ class ShapeOverlays {
 }
 
 (function() {
-  const elmHamburger = document.querySelector('.hamburger');
-  const gNavItems = document.querySelectorAll('.global-menu__item');
+  const elmHamburger = document.querySelector('.start');
+  const gNavItems = document.querySelectorAll('.navItem');
   const elmOverlay = document.querySelector('.shape-overlays');
   const overlay = new ShapeOverlays(elmOverlay);
 
   elmHamburger.addEventListener('click', () => {
+    let e = event.target;
     if (overlay.isAnimating) {
       return false;
     }
@@ -199,6 +200,7 @@ class ShapeOverlays {
       elmHamburger.classList.add('is-opened-navi');
       for (var i = 0; i < gNavItems.length; i++) {
         gNavItems[i].classList.add('is-opened');
+        
       }
     } else {
       elmHamburger.classList.remove('is-opened-navi');
