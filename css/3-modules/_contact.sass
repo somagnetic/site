@@ -34,7 +34,7 @@
     display: none
     animation: slideIn 0.3s backwards
     &:not(.button)
-      height: 50vh
+      height: calc(50vw * 1.7)
   .check-container
     flex-direction: column
     justify-content: space-between
@@ -87,7 +87,7 @@
     width: 60%
     .continue
       &:not(.button)
-        height: 30vh
+        height: calc(30vw / 1.7)
     .check-container
       flex-direction: row
       flex-grow: 1
@@ -99,4 +99,3 @@
     label
       ~ label
         margin-left: 2.5%
-

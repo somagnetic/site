@@ -38,6 +38,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Hotjar Tracking Code for https://somagnetic.com --><!-- Global site tag (gtag.js) - Google Analytics -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111726450-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -49,15 +50,15 @@
 
   </head>
   <body class="main">
-    <main>
+    <main id="0">
       <nav class="container">
         <article class="row">
           <img src="/assets/img/so-magnetic-icon-color.svg" alt="Strong Branding and Logo Design for companies like startups, mergers, brands in transition, focused on brand strategy like increasing revenue and repositioning in the market." class="logo" id="logo">
           <ul class="module menu">
-            <li><a href="#work" class="toggle navItem">Work</a> </li>
-            <li><a href="#about" class="toggle navItem">About</a> </li>
-            <li><a href="#process" class="toggle navItem">Process</a> </li>
-            <button type="button" name="button" class="button toggle start" id="start">Start a Project</button>
+            <li><a href="#work" class=" navItem is-opened">Work</a> </li>
+            <li><a href="#about" class=" navItem is-opened">About</a> </li>
+            <li><a href="#process" class=" navItem is-opened">Process</a> </li>
+            <a href="#0" class="button toggle start" id="start">Start a Project</a>
 
           </ul>
         </article>
@@ -75,8 +76,10 @@
   			<path class="shape-overlays__path"></path>
   			<path class="shape-overlays__path"></path>
   		</svg>
-      <section id="contact" class="container navItem">
+      
+<section id="contact" class="container navItem">
   <div class="row ">
+
     <h2>Let's Get in Contact</h2>
     <form action="https://formspree.io/mykalvrm" method="POST">
       <input type="text" name="name" placeholder="Your Name..." class="transition enter text-center" required>
@@ -103,7 +106,9 @@
         </label>
       </div>
       <p class=" continue questionnaire-part-1 project" id="next">
+
         That's great! We are a company that focuses on helping your company reach it's goals through visual design. When starting a project with us, in order for us to get the conversation started while focusing on delivering value to you and your company, we have a few questions to get started. 
+
       </p>
       <div class="continue project questionnaire-part-2">
         <input type="text" name="Source" class="transition enter text-center" value="" placeholder="Referral? Twitter?">
@@ -192,5 +197,5 @@
     </main>
     <script type="text/javascript" src="/scripts/scripts.js">
     </script>
-  </body>
+
 </html>
