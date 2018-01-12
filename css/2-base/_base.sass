@@ -16,8 +16,7 @@ body
   line-height: 1.8
   opacity: 0
   transition: all ease .4s
-#no
-  pointer-events: none
+
 .hidden
   display: none !important
   opacity: 0
@@ -54,10 +53,8 @@ img
 body.main
   animation: fadeIn 1.5s
   opacity: 1
-// Logo & nav
-nav
-  img
-    width: 15vw
+
+
 // Typography
 a, a:link, a:visited, a:hover, a:focus
   transition: $transition
@@ -111,7 +108,10 @@ i
   display: inline-block
   min-width: 8em
   background: $highlight-3
-  font-size: 1.8rem
+
+  font-size: 1.3rem
+  text-align: center
+
   color: $light
   border: none
   border-radius: 8px
@@ -119,14 +119,23 @@ i
   &.secondary
     background: $secondary
   &.tertiary
-    background: $tertiary
+
+    background: $light
+    color: $main
+    font-size: 1.5rem
+    &:hover, &:focus, &:active
+      background-color:  darken($light, 15%)
 .button:active, .button:focus,a.button:active, a.button:focus
   background-color: darken($highlight-3, 45%)
+  color: light
 .button:hover, a.button:hover
   background-color: darken($highlight-3, 25%)
+  color: light
 .button ~ .button,a.button ~ a.button
   margin-left: 2em
   margin-right: 0
+
+
 // Scaffolding
 .container
   @include container()
@@ -135,20 +144,53 @@ i
   justify-content: flex-start
   align-items: center
   width: 100%
-  background: $light
+
   .row
     width: 90%
-    position: inherit
-    display: inline-block
+    font-size: 1.3rem
+
+// Logo & nav
+nav.container
+  position: fixed
+  top: 0
+  left: 0
+  color: $dark
+  padding: 1rem
+  padding: .5rem 0 2.5rem 0
+  z-index: 1000
+  width: 100%
+  .row
+    display: flex
+    justify-content: space-between
+    align-items: center
+    align-content: flex-start
+    padding: 1rem 0
+    .module
+      position: relative
+      right: 0
+      font-size: 1rem
+      display: inline-flex
+      justify-content: space-between
+  ul
+    li
+      display: inline-block
+      list-style: none
+      padding: 1rem
+
+  img
+    width: 10vw
+
 header
   display: flex
   flex-direction: column
-  padding: 10vh 3vw
+  margin: 15vh 0 0
+  padding: 4 3vw
   overflow: hidden
-  height: 70vh
+  height: 80vh
   h1
     line-height: 1.5
-    font-size: calc(11vw)
+    font-size: 3.6rem
+
 footer
   display: flex
   flex-direction: column
@@ -158,7 +200,9 @@ footer
   height: 20vh
   padding-top: 20rem
   color: $dark
-// Columns
+
+// Grid Columns
+
 
 
 // Forms
@@ -168,8 +212,10 @@ form
     margin-bottom: 1.2em
     padding: .5em 2em
     background: none
-    border: 2px solid $highlight-3
-    color: $highlight-3
+
+    border: 1rem solid $dark
+    color: $dark
+
     border-top: 0
     border-bottom: 0
     transition: $transition
@@ -177,8 +223,10 @@ form
     text-align: center
     @include center(true, false)
     &:focus, &:active, &:hover
-      border-width: 10px
-      border-color: $highlight-3
+
+      border-width: 2.5rem
+      border-color: $dark
+
   label.module
     display: flex
     flex-direction: column
@@ -188,8 +236,10 @@ form
     padding: 1.5em
     width: 90%
     text-align: center
-    border: 2px solid $highlight-3
-    color: $highlight-3
+
+    border: .6rem solid $dark
+    color: $dark
+
     border-radius: 10px
     margin-bottom: .3em
     transition: $transition
@@ -199,37 +249,49 @@ form
       left: auto
       width: 50%
     &:hover
-      border: 2px dashed $highlight-3
-      color: $highlight-3
+
+      border: .6rem dashed $dark
+      color: $dark
   input[name$="-logo"]:checked ~ .container label[for$="-logo"]
-    background-color: $highlight-3
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[name$="-branding"]:checked ~ .container label[for$="-branding"]
-    background-color: $highlight-3
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[name$="-audit"]:checked ~ .container label[for$="-audit"]
-    background-color: $highlight-3
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[name$="-hello"]:checked ~ .container label[for$="-hello"]
-    background-color: $highlight-3
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[id$="size-1"]:checked ~ .container label[for$="size-1"]
-    background-color: $highlight-3
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[id$="size-2"]:checked ~ .container label[for$="size-2"]
-    background-color: $highlight-3
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[id$="size-3"]:checked ~ .container label[for$="size-3"]
-    background-color: $highlight-3
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[id$="size-4"]:checked ~ .container label[for$="size-4"]
-    background-color: $highlight-3
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[id$="-before-1"]:checked ~ .container label[for$="before-1"]
-    background-color: $highlight-3
+    background-color: $dark
+    border-color: $dark
     color: $light
   input[id$="-before-2"]:checked ~ .container label[for$="before-2"]
-    background-color: $highlight-3
+    background-color: $dark
+    border-color: $dark
+
     color: $light
   .container
     display: flex
@@ -237,34 +299,36 @@ form
     font-size: 100%
 @media only screen and (min-width: 800px)
   .container
-    width: 100%
+
     .row
-      width: 60%
-      margin: 0 auto
-  nav
-    position: sticky
-    width: 97vw
-    padding: 0
-    @include center(true,false)
-    .row
-      justify-content: space-between
-      margin: 0
-      .module
-        width: 20%
+      width: 82%
+  nav.container
+    margin: 2rem 0 0 0
+    background: none
     img
-      width: 4vw
+      width: 3vw
+    .row
+      display: flex
+      justify-content: space-between
+      align-items: center
+      .module
+        position: relative
+        right: 0
+        font-size: 2rem
+        width: 50%
+        font-size: 2rem
   header.container
-    margin-bottom: 3em
+    margin: 3rem 0
     height: 70vh
+    top: 15vh
+
     .row
       width: 85%
     h1
       margin-top: -.5rem
-      font-size: 5.3vw
-      line-height: 1.05
 
-  .col
-    display: inline-block
+      font-size: 5.4vw
+      line-height: 1.05
   form
     margin: 0 auto
 

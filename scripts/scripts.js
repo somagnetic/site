@@ -185,26 +185,48 @@ class ShapeOverlays {
 }
 
 (function() {
-  const elmHamburger = document.querySelector('.hamburger');
-  const gNavItems = document.querySelectorAll('.global-menu__item');
+
+  const elmHamburger = document.querySelectorAll('.toggle');
+  const gNavItems = document.querySelectorAll('.navItem');
   const elmOverlay = document.querySelector('.shape-overlays');
   const overlay = new ShapeOverlays(elmOverlay);
 
-  elmHamburger.addEventListener('click', () => {
+  elmHamburger.forEach( function(item, elemFun){
+    item.addEventListener('click', () => {
+    let e = event.target;
+
     if (overlay.isAnimating) {
       return false;
     }
     overlay.toggle();
     if (overlay.isOpened === true) {
-      elmHamburger.classList.add('is-opened-navi');
+
+      // document.body.scrollTop = document.documentElement.scrollTop = 0;
+      item.classList.add('is-opened-navi');
       for (var i = 0; i < gNavItems.length; i++) {
         gNavItems[i].classList.add('is-opened');
+
       }
     } else {
-      elmHamburger.classList.remove('is-opened-navi');
+      item.classList.remove('is-opened-navi');
+
       for (var i = 0; i < gNavItems.length; i++) {
         gNavItems[i].classList.remove('is-opened');
       }
     }
   });
+
+});
 }());
+$(document).ready(function(){
+
+	//Check to see if the window is top if not then display button
+
+	//Click event to scroll to top
+	$('.start').click(function(){
+		$('html, body').animate({scrollTop : 0},800);
+		return false;
+	});
+
+});
+

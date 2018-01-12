@@ -1,8 +1,18 @@
 #contact
-  position: relative
+
+  position: absolute
   width: 90%
   margin: 0  auto
   margin-top: 5rem
+  top: 12vh
+  left: 50%
+  transform: translateX(-50%)
+  font-size: 1.7rem
+  color: $dark
+  z-index: 3
+  .row
+    width: 100%
+
   div[class*="quest"]
     flex-direction: column
     justify-content: center
@@ -10,15 +20,16 @@
     padding: .5em
     transition: $transition
     & *
-      opacity: .3
+
+      opacity: .45
+
   div.in-center
     *
       opacity: 1
   label
     display: inline-flex
     cursor: pointer
-    ~ label
-      margin-left: 2.5%
+
   .continue
     display: none
     animation: slideIn 0.3s backwards
@@ -39,7 +50,9 @@
     & ~ div span.message
       display: none !important
   input[name$="-hello"]:checked
-    & ~ .continue.message, input[name$="-hello"]:checked ~ div .continue.message
+
+    & ~ .continue.message, input[name$="-hello"]:checked ~ div .continue.message, input[name$="-else"]:checked ~ div .continue.message
+
       display: flex
     & ~ div span.message
       display: inline-flex !important
@@ -67,9 +80,10 @@
   #contact .contact .continue.questionnaire-part-#{$i}
     animation-delay: ($i/5)+s
 @media only screen and (min-width: 800px)
+
+
   #contact
-    position: relative
-    margin: 0 auto
+
     width: 60%
     .continue
       &:not(.button)
@@ -81,3 +95,8 @@
       width: 100%
       label
         height: 100%
+
+    label
+      ~ label
+        margin-left: 2.5%
+
