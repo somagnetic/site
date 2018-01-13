@@ -69,7 +69,21 @@ $(document).ready(function(){
   	        window.location.hash = target;
   	    });
   	});
-var animationDelay = 3500;
+    $(window).scroll(function () {
+       if ($(this).scrollTop() > 100) {
+           $('.scrollup').fadeIn();
+       } else {
+           $('.scrollup').fadeOut();
+       }
+   });
+
+   $('.start').click(function () {
+       $("html, body").animate({
+           scrollTop: 0
+       }, 600);
+       return false;
+   });
+var animationDelay = 3200;
 
 animateHeadline($('.cd-headline'));
 
@@ -191,7 +205,7 @@ class ShapeOverlays {
   const elmOverlay = document.querySelector('.shape-overlays');
   const overlay = new ShapeOverlays(elmOverlay);
 
-  elmHamburger.addEventListener('click', () => {
+  elmHamburger.addEventListener('click', function() {
     if (overlay.isAnimating) {
       return false;
     }

@@ -10,18 +10,18 @@ cdn:
 
 <header class="container">
   <article class="row">
-    <h1 class="cd-headline push"><span>We build a magnetic visual brand identity for companies in transition so that they can &mdash; </span>
+    <h1 class="cd-headline push"><span>We design a strong visual brand identity for companies in transition so that they can &mdash; </span>
     <span class="cd-words-wrapper word-highlight">
-    <b class="is-visible">start attracting the right people.</b>
+    <b class="is-visible">move to the next level of business.</b>
     <b>drive higher monthly recurring revenue.</b>
+    <b>scale their business with strategic brand goals in mind.</b>
     <b>reposition themselves better within their market.</b>
+    <b>establish themselves as the right choice to their customers.</b>
     <b>magnify their brand awareness.</b>
     <b>launch their business with a strong visual identity.</b>
     <b>transition from old &amp; outdated branding.</b>
     <b>reduce bounce and churn rates.</b>
-    <b>scale their business with strategic brand goals in mind.</b>
     <b>make their products more recognizable.</b>
-
     <b>catch an industry wave early.</b>
     <b>reach out to new and exciting markets.</b>
       </span>
@@ -31,7 +31,28 @@ cdn:
 
 <section class="container" id="work">
   <article class="row">
+    <h2>Who we've worked with</h2>
+    <h5>Case studies coming soon</h5>    
+  </article>
+  {% for post in site.categories.case-study %}
+    <article class="row grid">
+      <div class="module">
+        <img src="{{site.baseurl}}/assets/img/case-study{{post.index_image}}" alt="{{post.subtitle}}">
+      </div>
+      <div class="module">
+        <img src="{{site.baseurl}}/assets/img/case-study{{post.svg_logo}}" alt="{{post.description}}" class="client-logo">
+        <h3>{{post.title}}</h3>
+        <h6>{{post.subtitle}}</h6>
+        <p>{{post.description}}</p>
+      </div>
+    </article>
+  {% endfor %}
+  <article class="row">
     <div class="module">
+      <img src="{{site.baseurl}}/assets/img/case-study" alt="">
+    </div>
+    <div class="module">
+
     </div>
   </article>
 </section>
@@ -40,10 +61,16 @@ cdn:
     <div class="module">
 
     </div>
+    <div class="module">
+
+    </div>
   </article>
 </section>
 <section class="container" id="process">
   <article class="row">
+    <div class="module">
+
+    </div>
     <div class="module">
 
     </div>

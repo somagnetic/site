@@ -135,21 +135,7 @@ i
   margin-left: 2em
   margin-right: 0
 
-
-// Scaffolding
-.container
-  @include container()
-  display: flex
-  flex-direction: column
-  justify-content: flex-start
-  align-items: center
-  width: 100%
-
-  .row
-    width: 90%
-    font-size: 1.3rem
-
-// Logo & nav
+// Logo, nav, headers, and footers
 nav.container
   position: fixed
   top: 0
@@ -173,9 +159,10 @@ nav.container
       justify-content: space-between
   ul
     li
-      display: inline-block
+      display: inline-flex
       list-style: none
       padding: 1rem
+      align-items: center
 
   img
     width: 10vw
@@ -200,6 +187,25 @@ footer
   height: 20vh
   padding-top: 20rem
   color: $dark
+
+// Scaffolding
+.container
+  @include container()
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  align-items: center
+  width: 100%
+
+  .row
+    width: 90%
+    font-size: 1.3rem
+    margin-bottom: 10rem
+    .module
+      display: inline-block
+      img
+        &.client-logo
+          width: 25rem
 
 // Grid Columns
 
@@ -299,9 +305,12 @@ form
     font-size: 100%
 @media only screen and (min-width: 800px)
   .container
-
     .row
       width: 82%
+      .module
+        width: 50%
+        ~ .module
+          width: 40%
   nav.container
     margin: 2rem 0 0 0
     background: none
@@ -319,11 +328,14 @@ form
         font-size: 2rem
   header.container
     margin: 3rem 0
-    height: 70vh
+    height: 95vh
     top: 15vh
 
     .row
       width: 85%
+      .module
+        img
+          width: 70%
     h1
       margin-top: -.5rem
 
