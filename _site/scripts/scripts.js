@@ -10,7 +10,8 @@ function forEach(list, callback) {
     callback(list[i], i, list);
   }
 }
-//smooth scroll-behavior
+
+//nav background
 
 //questionnaire
 var question = byClass('continue');
@@ -204,14 +205,14 @@ class ShapeOverlays {
   const gNavItems = document.querySelectorAll('.navItem');
   const elmOverlay = document.querySelector('.shape-overlays');
   const overlay = new ShapeOverlays(elmOverlay);
-
   elmHamburger.addEventListener('click', function() {
     if (overlay.isAnimating) {
       return false;
     }
     overlay.toggle();
     if (overlay.isOpened === true) {
-      elmHamburger.classList.add('is-opened-navi');
+      elmHamburger.classList.add('is-opened-navi', 'tertiary');
+      elmHamburger.textContent = "Close";
       for (var i = 0; i < gNavItems.length; i++) {
         if(i>=3){
           gNavItems[i].classList.add('is-opened');
@@ -220,8 +221,8 @@ class ShapeOverlays {
         }
       }
     } else {
-      elmHamburger.classList.remove('is-opened-navi');
-
+      elmHamburger.classList.remove('is-opened-navi', 'tertiary');
+      elmHamburger.textContent = "Start a Project";
       for (var i = 0; i < gNavItems.length; i++) {
 
           if(i>=3){

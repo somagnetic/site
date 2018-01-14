@@ -8,7 +8,7 @@ index_image: /assets/img/index.jpg
 cdn:
 ---
 
-<header class="container">
+<header class="container" id="hero">
   <article class="row">
     <h1 class="cd-headline push"><span>We design a strong visual brand identity for companies in transition so that they can &mdash; </span>
     <span class="cd-words-wrapper word-highlight">
@@ -32,7 +32,7 @@ cdn:
 <section class="container" id="work">
   <article class="row">
     <h2>Who we've worked with</h2>
-    <h5>Case studies coming soon</h5>    
+    <h5>Case studies coming soon</h5>
   </article>
   {% for post in site.categories.case-study %}
     <article class="row grid">
@@ -47,32 +47,46 @@ cdn:
       </div>
     </article>
   {% endfor %}
-  <article class="row">
+  <article class="row" id="about">
     <div class="module">
-      <img src="{{site.baseurl}}/assets/img/case-study" alt="">
+      <h2>About</h2>
+      <p>When filmmakers make films, they pick the people who best embody the role. David Fincher doesn’t always use Brad Pitt, even though he was fantastic in Fight Club and Se7en. Christopher Nolan doesn’t always use the same lead actor either. Leonardo DiCaprio was awesome in Inception, as was Guy Pearce in Memento, as was Christian Bale in the Batman movies, but you couldn’t interchange them because of how well they were cast. Leo as the Dark Knight? “I’m the king of the world, Alfred!” Too weird.
+      </p>
+      <p>Similarly, SuperFriendly projects are made up of the people who best embody the role. SuperFriendly doesn’t keep a full-time staff. Instead, we use what we lovingly call the “The SuperFriend Model,” where we call on some of the best folks in the industry to come together and collaborate, depending on your project’s needs. Some projects need a handful of specialists, like an information architect who has years of experience making sites for kids or a 3D animator who has extensive knowledge of the home improvement industry. Other projects call for an army of variously tenured folks, from junior-level production people to seasoned veterans who call the shots.
+      </p>
+      <p>Based in Philly, Dan Mall is SuperFriendly’s founder and director. Dan has over a decade of experience as an award-winning designer, creative director, and advisor, and he’s connected to the best people in the industry. For every project, Dan pulls together the right people for the job. The result is a project team that’s handpicked for your situation, with the highest quality work you won’t be able to find anywhere else.
+      </p>
+
     </div>
     <div class="module">
+      <img src="" alt="">
+    </div>
+  </article>
+  <article class="row" id="process">
+    <div class="module">
 
+    </div>
+    <div class="module">
+      <p>So Magnetic is a flexible team, meaning that we’re not like
+      other agencies.</p>
+      <p>Not every project is the same.</p>
+      <p>The scope of an inquiry could be simple as for small online
+      retailers; projects could span months with multiple products
+      or services.</p>
+      <p>To accomodate the mission, So Magnetic projects are
+      made up of the people who best embody the role.</p>
+      <p>This company is headed by Darian Rosebrook, a creative
+      entrepreneur who’s focus is helping audiences connect with
+      the brands they love; all while helping businesses achieve
+      their goals.</p>
+      <p>Your project is in safe hands</p>
     </div>
   </article>
 </section>
 <section class="container" id="about">
   <article class="row">
-    <div class="module">
-
-    </div>
-    <div class="module">
-
-    </div>
+    <h2></h2>
   </article>
 </section>
 <section class="container" id="process">
-  <article class="row">
-    <div class="module">
-
-    </div>
-    <div class="module">
-
-    </div>
-  </article>
 </section>

@@ -95,6 +95,8 @@ h1
   font-size: 3.5rem
   margin-bottom: $margin
   letter-spacing: -.05em
+p
+  margin-bottom: 2rem
 i
   margin-right: 2rem
   margin-left: 2rem
@@ -108,24 +110,25 @@ i
   display: inline-block
   min-width: 8em
   background: $highlight-3
-
   font-size: 1.3rem
   text-align: center
-
   color: $light
   border: none
   border-radius: 8px
   padding: 1em
   &.secondary
-    background: $secondary
-  &.tertiary
-
-    background: $light
-    color: $main
-    font-size: 1.5rem
+    background: $highlight-2
     &:hover, &:focus, &:active
-      background-color:  darken($light, 15%)
+
+      background-color:  darken($highlight-2, 15%)
+  &.tertiary
+    background: $highlight
+    color: $dark
+    &:hover, &:focus, &:active
+
+      background-color:  darken($highlight, 15%)
 .button:active, .button:focus,a.button:active, a.button:focus
+  font-size: 1.2rem
   background-color: darken($highlight-3, 45%)
   color: light
 .button:hover, a.button:hover
@@ -137,24 +140,25 @@ i
 
 // Logo, nav, headers, and footers
 nav.container
-  position: fixed
   top: 0
   left: 0
   color: $dark
-  padding: 1rem
-  padding: .5rem 0 2.5rem 0
-  z-index: 1000
+  z-index: 100
   width: 100%
+  &.active
+    background: $light
+    filter: drop-shadow($dark 2rem -15px 10px 20px)
   .row
     display: flex
     justify-content: space-between
     align-items: center
     align-content: flex-start
-    padding: 1rem 0
+    padding: 1.5rem 0 1.5rem 0
+    margin-bottom: 0
     .module
       position: relative
       right: 0
-      font-size: 1rem
+      font-size: 1.3rem
       display: inline-flex
       justify-content: space-between
   ul
@@ -163,17 +167,23 @@ nav.container
       list-style: none
       padding: 1rem
       align-items: center
-
   img
     width: 10vw
+#start
+  position: fixed
+  bottom: 2.5rem
+  left: 3rem
+  z-index: 1000
 
-header
+
+
+header.container
   display: flex
   flex-direction: column
-  margin: 15vh 0 0
-  padding: 4 3vw
+  margin: 1vh 0 0
+  padding: 0 3vw
   overflow: hidden
-  height: 80vh
+  height: calc(100vw *1.7)
   h1
     line-height: 1.5
     font-size: 3.6rem
@@ -212,6 +222,8 @@ footer
 
 
 // Forms
+#contact
+  top: 0
 form
   input:not(.button), textarea,
     width: 100%
@@ -303,33 +315,47 @@ form
     display: flex
     padding: 3rem 0
     font-size: 100%
+  #submit
+    position: fixed
+    bottom: 2.5rem
+    right: 3rem
+    z-index: 1000
+
+
 @media only screen and (min-width: 800px)
   .container
     .row
       width: 82%
       .module
-        width: 50%
+        width: 50rem
         ~ .module
-          width: 40%
+          width: 50rem
+          margin-left: 5rem
   nav.container
-    margin: 2rem 0 0 0
     background: none
     img
       width: 3vw
     .row
+      margin: 2rem 0 0 0
       display: flex
-      justify-content: space-between
+      justify-content: flex-start
       align-items: center
       .module
         position: relative
-        right: 0
+        margin-left: 5rem
         font-size: 2rem
-        width: 50%
-        font-size: 2rem
+
+  #start
+    position: fixed
+    text-align: center
+    top: 5rem
+    right: 3rem
+    bottom: auto
+    left: auto
+    z-index: 1000
   header.container
     margin: 3rem 0
-    height: 95vh
-    top: 15vh
+    height: calc(70vw /1.7)
 
     .row
       width: 85%
@@ -357,3 +383,8 @@ form
         width: 24%
     & ~ label.module
       margin-left: 1em
+    #submit
+      position: static
+      bottom: auto
+      right: 3rem
+      z-index: 1000
