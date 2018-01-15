@@ -8,8 +8,21 @@ subtitle: Logo Design, Website Branding, Product Design, Packaging Design, Custo
 description: We worked with Compass of Design to completely design the brand experience for new designers looking to level up their skills. This project included digital designs, product and packaging design, with user and brand experience.
 svg_logo: /compass-of-design/cod-logo.svg
 index_image: /compass-of-design/thumbnails.jpg
+image_path: /assets/img/case-study/compass-of-design/
 study_images:
--
+- index.jpg
+- community.jpg
+- newsletter.jpg
+- confidence.jpg
+- articles.jpg
+- letterpress-card.jpg
+- enamel-pin.jpg
+- stickers.jpg
+- feature-product.png
+- textures.jpg
+- flyer.jpg
+- double-crime-Artboard 2.png
+- backer-card-final.jpg
 link_to: https://compassofdesign.com
 testimony:
 
