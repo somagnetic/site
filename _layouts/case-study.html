@@ -20,33 +20,27 @@ layout: default
   <img src="{{site.baseurl}}/assets/img/case-study{{page.svg_logo}}" alt="{{page.description}}" class="client-logo">
     <h3>Scope of the Project:</h3>
     <p>{{page.subtitle}}</p>
-    <h3>Challenge</h3>
-    <p>{{page.challenge}}</p>
+    <h3>Our Main Goals:</h3>
+    {% for paragraph in page.goals %}<p>{{paragraph}}</p>{% endfor %}
+    <h3>The Challenge</h3>
+    {% for paragraph in page.challenge %}<p>{{paragraph}}</p>{% endfor %}
     <h3>Outcome</h3>
     <p>{{page.outcome}}</p>
     {% if page.link_to %}
   <h6><a href="{{page.link_to}}" target="_blank" rel="nofollow">See it live</a></h6>
     {% endif %}
+    <h3>Get started on a project like this with your company!</h3>
+    <p>We're always excited to hear what people are working on, and would love to see what you have in mind.</p>
+    <div class="button secondary start">
+      Send us a message!
+    </div>
   </div>
     <div class="module">
       {% for images in page.study_images %}
       {% assign iteration = forloop.index0 1%}
-        {% if forloop.index == 1 %}{% else %}<img src="{{site.baseurl}}{{page.image_path}}{{page.study_images[iteration]}}" alt="">{% endif %}
+        <img src="{{site.baseurl}}{{page.image_path}}{{page.study_images[iteration]}}" alt="">
       {% endfor %}
     </div>
   </article>
 </section>
-<section class="container">
-  <article class="row">
-    <div class="module">
-
-    </div>
-  </article>
-</section>
-<section class="container">
-  <article class="row">
-    <div class="module">
-
-    </div>
-  </article>
 </section>

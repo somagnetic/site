@@ -200,19 +200,21 @@ class ShapeOverlays {
 }
 
 (function() {
-
-  const elmHamburger = document.querySelector('.start');
+  const elmHamburger = document.querySelectorAll('.start');
+  const toggleButton = document.querySelector('.toggle');
   const gNavItems = document.querySelectorAll('.navItem');
   const elmOverlay = document.querySelector('.shape-overlays');
   const overlay = new ShapeOverlays(elmOverlay);
-  elmHamburger.addEventListener('click', function() {
+  elmHamburger.forEach( function(item, elemFun){
+    item.addEventListener('click', function() {
     if (overlay.isAnimating) {
       return false;
     }
     overlay.toggle();
     if (overlay.isOpened === true) {
-      elmHamburger.classList.add('is-opened-navi', 'tertiary');
-      elmHamburger.textContent = "Close";
+      item.classList.toggle('is-opened-navi', 'tertiary');
+      toggleButton.textContent = "Close";
+      toggleButton.classList.add('is-opened-navi', 'tertiary');
       for (var i = 0; i < gNavItems.length; i++) {
         if(i>=3){
           gNavItems[i].classList.add('is-opened');
@@ -221,16 +223,32 @@ class ShapeOverlays {
         }
       }
     } else {
-      elmHamburger.classList.remove('is-opened-navi', 'tertiary');
-      elmHamburger.textContent = "Start a Project";
+      item.classList.toggle('is-opened-navi', 'tertiary');
+      toggleButton.textContent = "Start a Project";
+      toggleButton.classList.remove('is-opened-navi', 'tertiary');
       for (var i = 0; i < gNavItems.length; i++) {
-
+//
           if(i>=3){
             gNavItems[i].classList.remove('is-opened');
           } else {
             gNavItems[i].classList.add('is-opened');
-          };
-      }
-    }
-  });
-}());
+            }
+          }
+        }
+      });
+    });
+}())
+    //
+    //       for (var i = 0; i < gNavItems.length; i++) {
+    //         gNavItems[i].classList.add('is-opened');
+    //
+    //       }
+    //     } else {
+    //       item.classList.remove('is-opened-navi');
+    //       for (var i = 0; i < gNavItems.length; i++) {
+    //         gNavItems[i].classList.remove('is-opened');
+    //       }
+    //     }
+    //   });
+    // });
+    // }());
