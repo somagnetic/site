@@ -3,6 +3,7 @@ layout: case-study
 category: case-study
 study_id: cm
 title: Clinically Media
+blurb: When you're going up against established companies for some of the biggest clients, with really high stakes, you need to be confident and relevant, yet you need to stand out enough to get noticed. We wanted to focus on the showcase of Clinically Media’s brand as the right choice to Medical directors or VPs of clinical operations in order to provide a very thought out and focused service to smaller biotech's and startups who are making a difference in the world.
 subtitle: Logo Design, Social Media Profiles, Corporate stationary, Framework and Wayfinding
 description: The founder of Clinically Media brought us on to reach their goal of repositioning themselves as the right choice within their market.
 goals:

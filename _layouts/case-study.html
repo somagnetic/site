@@ -24,8 +24,15 @@ layout: default
     {% for paragraph in page.goals %}<p>{{paragraph}}</p>{% endfor %}
     <h3>The Challenge</h3>
     {% for paragraph in page.challenge %}<p>{{paragraph}}</p>{% endfor %}
-    <h3>Outcome</h3>
+    <h3>What We Accomplished</h3>
     <p>{{page.outcome}}</p>
+    {% if page.kind_words %}
+      <p>&ldquo; {{page.kind_words}} &rdquo;</p>
+      <p class="word-highlight"><strong>{{page.who}}</strong></p>
+      <p>{{page.occupation}}</p>
+      <br/>
+      <br/>
+    {% endif %}
     {% if page.link_to %}
   <h6><a href="{{page.link_to}}" target="_blank" rel="nofollow">See it live</a></h6>
     {% endif %}
