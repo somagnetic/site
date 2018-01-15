@@ -1,13 +1,16 @@
 ---
-layout: default
+layout: case-study
 category: case-study
+study_id: cod
 title: Compass of Design
+blurb: We've run a long partnership with Compass of Design this past year to help culture and develop the brand that carries with it a strong solid foundation and framework for the execution of their strategy to build one of the best places for designers to congregate online. These designers within the community are serious about finding ways to improve their craft. Together, we built upon existing brand goals to solidify and amplify the brand's awareness.
 subtitle: Logo Design, Website Branding, Product Design, Packaging Design, Custom Iconography, Hand Lettering
 description: We worked with Compass of Design to completely design the brand experience for new designers looking to level up their skills. This project included digital designs, product and packaging design, with user and brand experience.
 svg_logo: /compass-of-design/cod-logo.svg
 index_image: /compass-of-design/thumbnails.jpg
 study_images:
 -
+link_to: https://compassofdesign.com
 testimony:
 
 sitemap:

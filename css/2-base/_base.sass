@@ -41,6 +41,7 @@ body
 .cf::after, .cf::before
   display: block
 img
+  display: inline-block
   width: 100%
 // Animations
 .transition
@@ -57,9 +58,21 @@ body.main
 
 // Typography
 a, a:link, a:visited, a:hover, a:focus
+  display: inline-block
   transition: $transition
   text-decoration: none
   color: $main
+a:before
+  content: ""
+  position: absolute
+  width: 0%
+  height: 2px
+  background-color: $main
+  bottom: 2px
+  left: 0
+  transition: $transition
+a:hover:before
+  width: 100%
 h2, h3, h4, h5, h6
   position: relative
   width: fit-content
@@ -118,15 +131,16 @@ i
   padding: 1em
   &.secondary
     background: $highlight-2
+    color: $light
     &:hover, &:focus, &:active
 
       background-color:  darken($highlight-2, 15%)
   &.tertiary
-    background: $highlight
-    color: $dark
+    background: $main
+    color: $light
     &:hover, &:focus, &:active
 
-      background-color:  darken($highlight, 15%)
+      background-color:  darken($main, 15%)
 .button:active, .button:focus,a.button:active, a.button:focus
   font-size: 1.2rem
   background-color: darken($highlight-3, 45%)
@@ -167,6 +181,7 @@ nav.container
       list-style: none
       padding: 1rem
       align-items: center
+      cursor: pointer
   img
     width: 10vw
 #start
@@ -174,6 +189,7 @@ nav.container
   bottom: 2.5rem
   left: 3rem
   z-index: 1000
+  cursor: pointer
 
 
 
@@ -184,9 +200,12 @@ header.container
   padding: 0 3vw
   overflow: hidden
   height: calc(100vw *1.7)
+  &.case-study
+    height: auto
+    padding: 5rem 0
   h1
     line-height: 1.5
-    font-size: 3.6rem
+    font-size: 3.4rem
 
 footer
   display: flex
@@ -209,17 +228,21 @@ footer
 
   .row
     width: 90%
-    font-size: 1.3rem
+    font-size: 1.5rem
     margin-bottom: 10rem
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
     .module
       display: inline-block
       vertical-align: top
       img
         &.client-logo
-          width: 25rem
+          width: 20rem
 
 // Grid Columns
-
+.grid
+  padding: 8rem 4rem
 
 
 // Forms
@@ -331,9 +354,13 @@ form
       width: 82%
       .module
         width: 50rem
+        img
+          width: 100%
         ~ .module
-          width: 50rem
+          width: 50%
           margin-left: 5rem
+  .grid
+    padding: 8rem 0
   nav.container
     background: none
     img
@@ -347,7 +374,6 @@ form
         position: relative
         margin-left: 10rem
         font-size: 2rem
-
   #start
     position: fixed
     text-align: center
@@ -359,6 +385,8 @@ form
   header.container
     margin: 3rem 0
     height: calc(70vw /1.7)
+    &.case-study
+      padding: 12rem 0
 
     .row
       width: 85%

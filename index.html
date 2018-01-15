@@ -47,16 +47,17 @@ cdn:
     </div>
   </article>
   {% for post in site.categories.case-study %}
-    <article class="row grid">
+    <article class="row grid" id="{{post.study_id}}">
       <div class="module">
-        <img src="{{site.baseurl}}/assets/img/case-study{{post.index_image}}" alt="{{post.subtitle}}">
+        <!-- <img src="{{site.baseurl}}/assets/img/case-study{{post.index_image}}" alt="{{post.subtitle}}"> -->
       </div>
       <div class="module">
         <img src="{{site.baseurl}}/assets/img/case-study{{post.svg_logo}}" alt="{{post.description}}" class="client-logo">
-        <h3>{{post.title}}</h3>
+        <h3><a href="{{site.baseurl}}{{post.url}}" class="case-study">{{post.title}}</a></h3>
         <h6>{{post.subtitle}}</h6>
         <p>{{post.description}}</p>
-      </div>
+        <h6><a href="{{site.baseurl}}{{post.url}}" class="word-highlight">Read our full case study for {{post.title}}</a></h6>
+      </div></a>
     </article>
   {% endfor %}
   <article class="row" id="about">
@@ -78,24 +79,24 @@ cdn:
     </div>
   </article>
   <article class="row" id="process">
-        <div class="module">
-        <h5>Receiving the Request</h5>
-        <p>Hiring a professional to handle a project brings peace of mind. To ensure both the client and the professional are on the same page, there are a few things that the professional needs to learn about the project. To achieve this level of understanding, we include a series of questions for starting the process of getting a quote for the work.</p>
-        <p>Serious requests are sent directly to us, and we take the utmost care responding to those inquiries. Because of the volume of requests that we have versus our workload, we are greatly selective of the projects we take on, carefully considering each project and our ability to work together. We want us to be able to trust in each other's ability to deliver. </p>
-
-        <h5>Establishing Trust and Roles</h5>
-        <p>Communication is key to all relationships. When we connect about starting your project, our first lines of communication are key to the validity of the relationship. You should be confident in our ability keep a solid line of communication and to execute a design that fulfills the requirements. I should be confident that you are willing to and capable of providing goals and content for the project.</p>
-        <h5>Pillars of the Design Process</h5>
-        <h6>Your Brand Goals</h6>
-        <h6>Project Discovery</h6>
-        <h6>Industry Research</h6>
-        <h6>Project Development</h6>
-        <h6>Project Presentation</h6>
-
-    </div>
     <div class="module">
       <h3>Working with us</h3>
       <h2>Exceptional design should be delivered along side solid business strategy.</h2>
+    </div>
+    <div class="module">
+      <h5>Receiving the Request</h5>
+      <p>Hiring a professional to handle a project brings peace of mind. To ensure both the client and the professional are on the same page, there are a few things that the professional needs to learn about the project. To achieve this level of understanding, we include a series of questions for starting the process of getting a quote for the work.</p>
+      <p>Serious requests are sent directly to us, and we take the utmost care responding to those inquiries. Because of the volume of requests that we have versus our workload, we are greatly selective of the projects we take on, carefully considering each project and our ability to work together. We want us to be able to trust in each other's ability to deliver. </p>
+
+      <h5>Establishing Trust and Roles</h5>
+      <p>Communication is key to all relationships. When we connect about starting your project, our first lines of communication are key to the validity of the relationship. You should be confident in our ability keep a solid line of communication and to execute a design that fulfills the requirements. I should be confident that you are willing to and capable of providing goals and content for the project.</p>
+      <h5>Pillars of the Design Process</h5>
+      <h6>Your Brand Goals</h6>
+      <h6>Project Discovery</h6>
+      <h6>Industry Research</h6>
+      <h6>Project Development</h6>
+      <h6>Project Presentation</h6>
+
     </div>
   </article>
 </section>

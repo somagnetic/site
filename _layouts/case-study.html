@@ -2,15 +2,37 @@
 layout: default
 ---
 
-<header class="container">
+<header class="container case-study" id="{{page.study_id}}">
   <article class="row">
+    <div class="module">
+    </div>
+    <div class="module">
 
+        <h3>Case Study:</h3>
+        <h1>{{page.title}}</h1>
+        <p>{{page.blurb}}</p>
+    </div>
   </article>
 </header>
 <section class="container">
   <article class="row">
+  <div class="module">
+  <img src="{{site.baseurl}}/assets/img/case-study{{page.svg_logo}}" alt="{{page.description}}" class="client-logo">
+    <h3>Scope of the Project:</h3>
+    <p>{{page.subtitle}}</p>
+    <h3>Challenge</h3>
+    <p>{{page.challenge}}</p>
+    <h3>Outcome</h3>
+    <p>{{page.outcome}}</p>
+    {% if page.link_to %}
+  <h6><a href="{{page.link_to}}" target="_blank" rel="nofollow">See it live</a></h6>
+    {% endif %}
+  </div>
     <div class="module">
-      
+      {% for images in page.study_images %}
+      {% assign iteration = forloop.index0 1%}
+        {% if forloop.index == 1 %}{% else %}<img src="{{site.baseurl}}{{page.image_path}}{{page.study_images[iteration]}}" alt="">{% endif %}
+      {% endfor %}
     </div>
   </article>
 </section>
@@ -28,4 +50,3 @@ layout: default
     </div>
   </article>
 </section>
-
