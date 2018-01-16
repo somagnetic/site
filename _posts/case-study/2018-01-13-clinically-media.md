@@ -7,7 +7,7 @@ blurb: When you're going up against established companies for some of the bigges
 subtitle: Logo Design, Social Media Profiles, Corporate stationary, Framework and Wayfinding
 description: The founder of Clinically Media brought us on to reach their goal of repositioning themselves as the right choice within their market.
 goals:
-- Create a more professional brand identity
+- Avoid the cliche look of medical clinics, while keeping the logo professional and within reach of the industry
 - Position themselves as the right choice in the marketplace for clinical research trials
 - Showcase Expertise in their field
 challenge:
