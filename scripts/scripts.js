@@ -121,7 +121,7 @@ const ease = {
       : 0.5 * Math.pow(2.0 * t - 2.0, 3.0) + 1.0;
   }
 }
-class ShapeOverlays {
+function ShapeOverlays() {
   constructor(elm) {
     this.elm = elm;
     this.path = elm.querySelectorAll('path');
