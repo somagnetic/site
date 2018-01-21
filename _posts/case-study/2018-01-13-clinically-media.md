@@ -18,7 +18,7 @@ goals:
 challenge:
 - Clinically Media is a company that produces training materials and run recruitment campaigns for clinical research trials.
 - Currently, Clinically Media is working on positioning their brand in order to be running alongside their competition rather than behind it.
-- Their current challenge is showcasing their brand as the right choice to Medical directors or VPs of clinical operations who deal with federal regulations, vast marketplace competition, and medical related information and products most of the day.
+- Their current challenge was showcasing their brand as the right choice to Medical directors or VPs of clinical operations who deal with federal regulations, vast marketplace competition, and medical related information and products most of the day.
 opportunities: Where the opportunity lies is within the design itself. We need something that both blended in, but drew enough attention from the mainstream design aesthetic that fills most of the intended market's intake of information. We sought out to fulfill that need for something different, but within the space.
 outcome:
 - The end result became a clever mix of both industries, clinical trials and marketing with small hidden elements tying the initals back into the icons. This design has been vetted up against those of the industry leaders and allows the logo to remain a prominent choice within the industry, along with tying their expertise within the familiar ecosystem of rivaling brands.
