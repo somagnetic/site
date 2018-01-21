@@ -27,6 +27,7 @@ outcome:
 - From initial concept through to final concept. Each step to create the line-work, the bar graph 'M', and  the choice of typeface blend both the familiarity of the clinical trial market to appealing to their need for data driven results when hiring companies to facilitate their recruitment campaigns.
 svg_logo:
 - /clinically-media/cm-logo.svg
+logo_additional:
 - /clinically-media/cm-logo-5.svg
 - /clinically-media/cm-logo-6.svg
 index_image: /clinically-media/large-waiting-room.png
