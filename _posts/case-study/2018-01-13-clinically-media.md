@@ -3,18 +3,24 @@ layout: case-study
 category: case-study
 study_id: cm
 title: Clinically Media
-blurb: When you're going up against established companies for some of the biggest clients, with really high stakes, you need to be confident and relevant, yet you need to stand out enough to get noticed. We wanted to focus on the showcase of Clinically Media’s brand as the right choice to Medical directors or VPs of clinical operations in order to provide a very thought out and focused service to smaller biotech's and startups who are making a difference in the world.
+project: Create a new logo identity for Clinically Media
+blurb: When you're going up against established companies for some of the biggest clients with really high stakes, you need to be confident and relevant, yet you need to stand out enough to get noticed. We wanted to focus on showcasing Clinically Media’s brand as the right choice to Medical directors or VPs of clinical operations. Their services provide a very thought out and data focused approach to clinical trial recruiting campaigns for smaller biotech's and startups who are making a difference in the world.
 subtitle: Logo Design, Social Media Profiles, Corporate stationary, Framework and Wayfinding
 description: The founder of Clinically Media brought us on to reach their goal of repositioning themselves as the right choice within their market.
+team:
+- Darian Rosebrook
+role:
+- Creative Director
 goals:
-- Avoid the cliche look of medical clinics, while keeping the logo professional and within reach of the industry
+- Avoid the cliche feel of medical clinics, while keeping the logo professional and within reach of the industry
 - Position themselves as the right choice in the marketplace for clinical research trials
 - Showcase Expertise in their field
 challenge:
 - Clinically Media is a company that produces training materials and run recruitment campaigns for clinical research trials.
-- Currently, Clinically Media is working on positioning their brand in order to be in the running with their competition.
-- Their current challenge is showcasing their brand as the right choice to Medical directors or VPs of clinical operations in order to provide a very thought out and focused service to smaller biotechs and startups who are making a difference in the world.
-opportunities:
+- Currently, Clinically Media is working on positioning their brand in order to be running alongside their competition rather than behind it.
+- Their current challenge is showcasing their brand as the right choice to Medical directors or VPs of clinical operations who deal with federal regulations, vast marketplace competition, and medical related information and products most of the day.
+opportunities: Where the opportunity lies is within the design itself. We need something that both blended in, but drew enough attention from the mainstream design aesthetic that fills most of the intended market's intake of information. We sought out to fulfill that need for something different, but within the space.
+outcome: The end result became a clever mix of both industries, clinical trials and marketing with small hidden elements tying the initals back into the icons. This design has been vetted up against those of the industry leaders and allows the logo to remain a prominent choice within the industry, along with tying their expertise within the familiar ecosystem of rivaling brands.
 svg_logo: /clinically-media/cm-logo.svg
 index_image: /clinically-media/large-waiting-room.png
 image_path: /assets/img/case-study/clinically-media/
@@ -39,3 +45,8 @@ sitemap:
   exclude: 'no'
 
 ---
+Through the client engagement, Victoria (the founder) and I worked on understanding the market expectations of their current client demographic. What that means is that we put together a profile of a person who best embodies someone that is going to both make the decision to hire her, but also the one that drives the success of her projects.
+
+We needed to make sure that based on the decisions that person makes each day to run their clinical trial, that making the decision to hire her is as sure fire and natural as the other companies and products they use during their daily tasks.
+
+Our resulting design then put together a research file of all the materials and companies that these directors come across which served as a quality filter for any concept designs that So Magnetic came up with during the development of the logo design.

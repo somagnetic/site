@@ -17,12 +17,20 @@ layout: default
 <section class="container">
   <article class="row">
   <div class="module">
-  <img src="{{site.baseurl}}/assets/img/case-study{{page.svg_logo}}" alt="{{page.description}}" class="client-logo">
-    <h3>Scope of the Project:</h3>
+    <h4>Project:</h4>
+    <h5>{{page.project}}</h5>
+    <p><strong class="word-highlight"><small>Team:</small></strong></p>
+    <ul class="team">
+      {% for team in page.team %}
+      {% assign iteration = forloop.index0 1%}
+      <li><strong>{{page.role[iteration]}} - {{team}}</strong></li>
+      {% endfor %}
+    </ul>
+    <p><strong class="word-highlight"><small>Project Scope</small></strong></p>
     <p>{{page.subtitle}}</p>
-    <h3>Our Main Goals:</h3>
+    <h4>Our Main Goals:</h4>
     {% for paragraph in page.goals %}<p>{{paragraph}}</p>{% endfor %}
-    <h3>The Challenge</h3>
+    <h4>The Challenge</h4>
     {% for paragraph in page.challenge %}<p>{{paragraph}}</p>{% endfor %}
     {% if page.kind_words %}
       <p>&ldquo; {{page.kind_words}} &rdquo;</p>
@@ -31,16 +39,20 @@ layout: default
       <br/>
       <br/>
     {% endif %}
-    {{page.content}}
-    <h3>What We Accomplished</h3>
+    <h4>The Opportunity and Process</h4>
+
+      {{page.content}}
+    <h4>What We Accomplished</h4>
+
+    <img src="{{site.baseurl}}/assets/img/case-study{{page.svg_logo}}" alt="{{page.description}}" class="client-logo">
     <p>{{page.outcome}}</p>
     {% if page.link_to %}
-  <h6><a href="{{page.link_to}}" target="_blank" rel="nofollow">See it live</a></h6>
+  <h4><a href="{{page.link_to}}" target="_blank" rel="nofollow">See it live</a></h4>
     {% endif %}
     <h3>Get started on a project like this with your company!</h3>
-    <p>We're always excited to hear what people are working on, and would love to see what you have in mind.</p>
+    <p>We're always excited to hear what people are working on, and would love to see how we can help you reach your goals through designing with your business!</p>
     <div class="button secondary start">
-      Send us a message!
+      Start a project with us
     </div>
   </div>
     <div class="module">
