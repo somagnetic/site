@@ -43,9 +43,12 @@ layout: default
 
       {{page.content}}
     <h4>What We Accomplished</h4>
+    {% for images in page.svg_logo %}
+    {% assign iteration = forloop.index0 1%}
+    <img src="{{site.baseurl}}/assets/img/case-study{{page.svg_logo[iteration]}}" alt="{{page.description}}" class="client-logo">
 
-    <img src="{{site.baseurl}}/assets/img/case-study{{page.svg_logo}}" alt="{{page.description}}" class="client-logo">
-    <p>{{page.outcome}}</p>
+    {% endfor %}
+    {% for paragraph in page.outcome %}<p>{{paragraph}}</p>{% endfor %}
     {% if page.link_to %}
   <h4><a href="{{page.link_to}}" target="_blank" rel="nofollow">See it live</a></h4>
     {% endif %}

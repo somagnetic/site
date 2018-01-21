@@ -20,8 +20,14 @@ challenge:
 - Currently, Clinically Media is working on positioning their brand in order to be running alongside their competition rather than behind it.
 - Their current challenge is showcasing their brand as the right choice to Medical directors or VPs of clinical operations who deal with federal regulations, vast marketplace competition, and medical related information and products most of the day.
 opportunities: Where the opportunity lies is within the design itself. We need something that both blended in, but drew enough attention from the mainstream design aesthetic that fills most of the intended market's intake of information. We sought out to fulfill that need for something different, but within the space.
-outcome: The end result became a clever mix of both industries, clinical trials and marketing with small hidden elements tying the initals back into the icons. This design has been vetted up against those of the industry leaders and allows the logo to remain a prominent choice within the industry, along with tying their expertise within the familiar ecosystem of rivaling brands.
-svg_logo: /clinically-media/cm-logo.svg
+outcome:
+- The end result became a clever mix of both industries, clinical trials and marketing with small hidden elements tying the initals back into the icons. This design has been vetted up against those of the industry leaders and allows the logo to remain a prominent choice within the industry, along with tying their expertise within the familiar ecosystem of rivaling brands.
+- The final mark remains distinctive down to its most recognizable elements. With consideration to various mediums that the logo design will be applied to, as the display size reduces in size, the detail of the logo reduces until the most distinctive parts remain.
+- The logo starts as the full mark, a rectangular outline, the logotype 'Clinically Media', and the bar graph remain as the full lockup. The secondary mark of the outine, the initial 'C' and the bar graph, all down to the outer line and bar graph which doubles as the initials 'C' and 'M'.
+svg_logo:
+- /clinically-media/cm-logo.svg
+- /clinically-media/cm-logo-5.svg
+- /clinically-media/cm-logo-6.svg
 index_image: /clinically-media/large-waiting-room.png
 image_path: /assets/img/case-study/clinically-media/
 study_images:
@@ -50,3 +56,5 @@ Through the client engagement, Victoria (the founder) and I worked on understand
 We needed to make sure that based on the decisions that person makes each day to run their clinical trial, that making the decision to hire her is as sure fire and natural as the other companies and products they use during their daily tasks.
 
 Our resulting design then put together a research file of all the materials and companies that these directors come across which served as a quality filter for any concept designs that So Magnetic came up with during the development of the logo design.
+
+From initial concept through to final concept. Each step to create the line-work, the bar graph 'M', and  the choice of typeface blend both the familiarity of the clinical trial market to appealing to their need for data driven results when hiring companies to facilitate their recruitment campaigns.

@@ -19,7 +19,8 @@ challenge:
 - Compass of Design is new to the space of design education. So what they lack in years of having an early ticket, they needed to make up for in relevance.
 - This relevance is often misinterpreted as keeping up with design trends, and instead needs to showcase the willingness to experiment, learn, teach, and repeat.
 - So with strategy as the focus, we needed to shape the brand to encompass the ability to experiment with the double effect of being able to stay on-brand.
-svg_logo: /compass-of-design/cod-logo.svg
+svg_logo:
+- /compass-of-design/cod-logo.svg
 index_image: /compass-of-design/thumbnails.jpg
 image_path: /assets/img/case-study/compass-of-design/
 study_images:
