@@ -1,8 +1,8 @@
 ---
 layout: default
 
-title: So Magnetic | Branding Design for companies, startups, and personal branding
-description: So Magnetic is a strategic branding design agency headquartered in the Northwest Washington region. We create magnetic brand identity and custom logo designs for clients.
+title: So Magnetic | Logo &amp; Branding Design for companies, startups, and personal projects
+description: So Magnetic is a strategic branding design agency headquartered in the Northwest Washington region. We create magnetic brand identity and custom logo designs for clients to help achieve strategic business goals through design strategy.
 custom_css:
 index_image: /assets/img/index.jpg
 cdn:
@@ -10,18 +10,18 @@ cdn:
 
 <header class="container" id="hero">
   <article class="row">
-    <h1 class="cd-headline push"><span>We design a strong visual brand identity for companies in transition so that they can &mdash; </span>
+    <h1 class="cd-headline push"><span>We help brands in transition like yours design a more magnetic brand identity so that you can &mdash; </span>
     <span class="cd-words-wrapper word-highlight">
     <b class="is-visible">move to the next level of business.</b>
     <b>drive higher monthly recurring revenue.</b>
-    <b>scale their business with strategic brand goals in mind.</b>
-    <b>reposition themselves better within their market.</b>
-    <b>establish themselves as the right choice to their customers.</b>
-    <b>magnify their brand awareness.</b>
-    <b>launch their business with a strong visual identity.</b>
-    <b>transition from old &amp; outdated branding.</b>
+    <b>scale your business with strategic brand goals in mind.</b>
+    <b>reposition yourselves better within your market.</b>
+    <b>establish yourselves as the right choice to your customers.</b>
+    <b>magnify your brand awareness.</b>
+    <b>launch your business with a strong visual identity.</b>
+    <b>update and unify outdated branding.</b>
     <b>reduce bounce and churn rates.</b>
-    <b>make their products more recognizable.</b>
+    <b>make your products more recognizable.</b>
     <b>catch an industry wave early.</b>
     <b>reach out to new and exciting markets.</b>
       </span>
@@ -35,14 +35,15 @@ cdn:
       <h3>Work</h3>
       <h2>Here are some clients that we've had the pleasure of working with</h2>
     </div>
-    <div class="module">
-      {% for post in site.categories.testimony %}
-        <h4>{{post.who}}</h4>
-        <h5>{{post.occupation}}</h5>
-        <p>&ldquo; {{post.testimony}} &rdquo;</p>
-        <br/>
-        <br/>
-      {% endfor %}
+    <div class="module grid logo-list">
+      <img src="{{site.baseurl}}/assets/img/case-study/compass-of-design/cod-logo.svg" alt="Compass of Design logo, designed by So Magnetic" title="Compass of Design logo, designed by So Magnetic">
+      <img src="{{site.baseurl}}/assets/img/logo-list/cm-logo-1-wordmark-dark.svg" alt="Clinically Media Logo, designed by So Magnetic" title="Clinically Media Logo, designed by So Magnetic">
+      <img src="{{site.baseurl}}/assets/img/logo-list/ks-logo-wordmark-grey-300-svg.svg" alt="KeySpark Logo, designed by So Magnetic" title="KeySpark Logo, designed by So Magnetic">
+      <img src="{{site.baseurl}}/assets/img/logo-list/icon-5-peaks.svg" alt="Logo design for Five Peaks Brewery, designed by So Magnetic" title="Logo design for Five Peaks Brewery, designed by So Magnetic">
+      <img src="{{site.baseurl}}/assets/img/logo-list/m-logo.svg" alt="Logo Design for Minimum, designed by So Magnetic" title="Logo Design for Minimum, designed by So Magnetic">
+      <img src="{{site.baseurl}}/assets/img/logo-list/gem.svg" alt="Personal Branding and logo, designed by So Magnetic" title="Personal Branding and logo, designed by So Magnetic">
+      <img src="{{site.baseurl}}/assets/img/logo-list/gyc.svg" alt="Logo design for Grow Your Code Podcast, designed by So Magnetic" title="Logo design for Grow Your Code Podcast, designed by So Magnetic">
+      <img src="{{site.baseurl}}/assets/img/logo-list/tl.svg" alt="Logo design for Travelight, designed by So Magnetic" title="Logo design for Travelight, designed by So Magnetic">
 
     </div>
   </article>
@@ -60,6 +61,20 @@ cdn:
       </div>
     </article>
   {% endfor %}
+  {% for post in site.categories.testimony %}
+  {% capture article %}{% cycle '1', '2' %}{% endcapture %}
+  {% if article == '1' %}<article class="row">{% endif %}
+    <div class="module">
+
+      <h4>{{post.who}}</h4>
+      <h5>{{post.occupation}}</h5>
+      <p>&ldquo; {{post.testimony}} &rdquo;</p>
+      <br/>
+      <br/>
+    </div>
+    {% if article == '2' or forloop.last %}</article>{% endif %}
+    {% endfor %}
+
   <article class="row" id="about">
     <div class="module">
       <h3>About</h3>
