@@ -250,12 +250,17 @@ footer
 .grid
   padding: 8rem 4rem
   &.logo-list
-    opacity: .7
+    padding: 0
     img
+      opacity: .7
+      transition: $transition
       filter: grayscale(1)
-      max-width: 12rem
+      max-width: 45%
       height: 15rem
-      margin: .8rem
+      margin: .2rem
+      &:hover
+        opacity: 1
+        filter: none
 
 
 // Forms

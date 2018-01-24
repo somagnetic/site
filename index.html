@@ -47,20 +47,6 @@ cdn:
 
     </div>
   </article>
-  {% for post in site.categories.case-study %}
-    <article class="row grid" id="{{post.study_id}}">
-      <div class="module">
-        <!-- <img src="{{site.baseurl}}/assets/img/case-study{{post.index_image}}" alt="{{post.subtitle}}"> -->
-      </div>
-      <div class="module">
-        <img src="{{site.baseurl}}/assets/img/case-study{{post.svg_logo}}" alt="{{post.description}}" class="client-logo">
-        <h3><a href="{{site.baseurl}}{{post.url}}" class="case-study">{{post.title}}</a></h3>
-        <h6>{{post.subtitle}}</h6>
-        <p>{{post.description}}</p>
-        <h6><a href="{{site.baseurl}}{{post.url}}" class="word-highlight">Read our full case study for {{post.title}}</a></h6>
-      </div>
-    </article>
-  {% endfor %}
   {% for post in site.categories.testimony %}
   {% capture article %}{% cycle '1', '2' %}{% endcapture %}
   {% if article == '1' %}<article class="row">{% endif %}
@@ -74,7 +60,24 @@ cdn:
     </div>
     {% if article == '2' or forloop.last %}</article>{% endif %}
     {% endfor %}
-
+<!--
+  <article class="row ">
+      <h3>Case Studies</h3>
+  </article> -->
+  {% for post in site.categories.case-study %}
+    <article class="row grid" id="{{post.study_id}}">
+      <div class="module">
+        <!-- <img src="{{site.baseurl}}/assets/img/case-study{{}}" alt="{{post.subtitle}}"> -->
+      </div>
+      <div class="module">
+        <img src="{{site.baseurl}}/assets/img/case-study{{post.svg_logo}}" alt="{{post.description}}" class="client-logo">
+        <h3><a href="{{site.baseurl}}{{post.url}}" class="case-study">{{post.study_title}}</a></h3>
+        <h6>{{post.subtitle}}</h6>
+        <p>{{post.description}}</p>
+        <h6><a href="{{site.baseurl}}{{post.url}}" class="word-highlight">Read our full case study for {{post.study_title}}</a></h6>
+      </div>
+    </article>
+  {% endfor %}
   <article class="row" id="about">
     <div class="module">
       <h3>About</h3>
@@ -111,6 +114,9 @@ cdn:
     </div>
     </article>
     <article class="row">
+      <div class="module">
+
+      </div>
       <div class="module">
       <h3>What are you working on?</h3>
       <p>We're always excited to hear what people are working on, and would love to see how we can help you achieve that goal.</p>
