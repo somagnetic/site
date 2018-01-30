@@ -51,7 +51,6 @@ cdn:
   {% capture article %}{% cycle '1', '2' %}{% endcapture %}
   {% if article == '1' %}<article class="row">{% endif %}
     <div class="module">
-
       <h4>{{post.who}}</h4>
       <h5>{{post.occupation}}</h5>
       <p>&ldquo; {{post.testimony}} &rdquo;</p>
@@ -65,9 +64,10 @@ cdn:
       <h3>Case Studies</h3>
   </article> -->
   {% for post in site.categories.case-study %}
+  {% if post.ready %}
     <article class="row grid" id="{{post.study_id}}">
       <div class="module">
-        <!-- <img src="{{site.baseurl}}/assets/img/case-study{{}}" alt="{{post.subtitle}}"> -->
+        <!-- <img src="{{site.baseurl}}/assets/img/case-study" alt="{{post.subtitle}}"> -->
       </div>
       <div class="module">
         <img src="{{site.baseurl}}/assets/img/case-study{{post.svg_logo}}" alt="{{post.description}}" class="client-logo">
@@ -76,7 +76,7 @@ cdn:
         <p>{{post.description}}</p>
         <h6><a href="{{site.baseurl}}{{post.url}}" class="word-highlight">Read our full case study for {{post.study_title}}</a></h6>
       </div>
-    </article>
+    </article>{% else %}{% endif %}
   {% endfor %}
   <article class="row" id="about">
     <div class="module">

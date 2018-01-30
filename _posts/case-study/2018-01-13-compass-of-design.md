@@ -43,7 +43,7 @@ study_images:
 - backer-card-final.jpg
 link_to: https://compassofdesign.com
 testimony:
-
+ready: yes
 sitemap:
   lastmod: 2016-05-01
   priority: 0.7
