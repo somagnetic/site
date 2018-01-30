@@ -49,7 +49,7 @@ study_images:
 - mockup-truck-rear-light-logo.jpg
 link_to:
 testimony:
-ready: 
+ready: yes
 sitemap:
   lastmod: 2016-05-01
   priority: 0.7
