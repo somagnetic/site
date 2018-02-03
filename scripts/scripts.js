@@ -84,7 +84,7 @@ $(document).ready(function(){
        }, 600);
        return false;
    });
-var animationDelay = 3200;
+var animationDelay = 3500;
 
 animateHeadline($('.cd-headline'));
 
