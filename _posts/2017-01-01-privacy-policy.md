@@ -1,3 +1,7 @@
+---
+layout: article
+title: Privacy Policy
+---
 # <br>
 
 **ONLINE PRIVACY POLICY AGREEMENT**
@@ -12,7 +16,7 @@ obligation not only to meet but to exceed most existing privacy standards.
 **THEREFORE**, this Privacy Policy Agreement shall apply to So Magnetic LLC and
 any subsidiary company listed below , and thus it shall govern any and all data
 collection and usage thereof. Through the use of
-[https://compassofdesign.com](https://compassofdesign.com) you are herein
+[https://somagnetic.com](https://somagnetic.com) you are herein
 consenting to the following data procedures expressed within this agreement.
 
 **Subsidiary Company:**
@@ -55,7 +59,7 @@ in the operation of our website and to ensure delivery of the services you need
 and request. At times, we may find it necessary to use personally identifiable
 information as a means to keep you informed of other possible products and/or
 services that may be available to you from
-[https://compassofdesign.com](https://compassofdesign.com) and our subsidiaries
+[https://somagnetic.com](https://somagnetic.com) and our subsidiaries
 . So Magnetic LLC and our subsidiaries may also be in contact with you with
 regards to completing surveys and/or research questionnaires related to your
 opinion of current or potential future services that may be offered.
@@ -86,7 +90,7 @@ website;
 Magnetic LLC; and
 
 · Perform under demanding conditions in an effort to safeguard the personal
-safety of users of [https://compassofdesign.com](https://compassofdesign.com)
+safety of users of [https://somagnetic.com](https://somagnetic.com)
 and/or the general public.
 
 **Children Under Age of 13**
@@ -136,8 +140,7 @@ credit card and personal information.
 
 So Magnetic LLC reserves the right to update and/or change the terms of our
 privacy policy, and as such we will post those change to our website homepage at
-[https://compassofdesign.com,](https://compassofdesign.com,) so that our users
-and/or visitors are always aware of the type of information we collect, how it
+[https://somagnetic.com](https://somagnetic.com) and/or visitors are always aware of the type of information we collect, how it
 will be used, and under what circumstances, if any, we may disclose such
 information. If at any point in time So Magnetic LLC decides to make use of any
 personally identifiable information on file, in a manner vastly different from
@@ -161,14 +164,13 @@ If you have any questions or concerns regarding the Privacy Policy Agreement
 related to our website, please feel free to contact us at the following email,
 telephone number or mailing address.
 
-**Email:** 4256225706
+**Email:** hello@somagnetic.com
 
 **Mailing Address:**
 
 So Magnetic LLC
 
-1107 South 3rd Street
-
-Mount Vernon, Washington 98273
+12402 Admiralty Way #K205
+Everett, Wa 98204
 
 05/02/2017
