@@ -59,6 +59,6 @@ sitemap:
 ---
 "This project was done in a tight timeframe of two weeks. I got to work with Zack, the founder of The Glass Frontier to connect the extensive vision he has for his service to the visual design he was looking forward to building his brand. As with most service companies, there's a lot of competition out there, and a lot of people so focused on work that good design gets left behind. I wanted to capture a bit of that classic good design with a great representation of his service and level of quality."
 
-We needed to make sure that based on the decisions that person makes each day to run their clinical trial, that making the decision to hire her is as sure fire and natural as the other companies and products they use during their daily tasks.
+We needed to make sure that based on the decisions that homemakers and business owners have when hiring professional services to work on the exterior of their buildings that they choose people who look suited to do the job right the first time. So having a professional look with a friendly vibe was priority to the brand.
 
-Our resulting design then put together a research file of all the materials and companies that these directors come across which served as a quality filter for any concept designs that So Magnetic came up with during the development of the logo design.
+Our resulting design then put together a research file of all the materials and companies that these owners come across which served as a quality filter for any concept designs that So Magnetic came up with during the development of the logo design.
