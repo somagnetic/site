@@ -251,18 +251,24 @@ footer
 // Grid Columns
 .grid
   padding: 8rem 4rem
-  &.logo-list
-    padding: 0
-    img
-      opacity: .5
-      transition: $transition
-      filter: grayscale(1)
-      max-width: 45%
-      height: 15rem
-      margin: .2rem
-      &:hover
-        opacity: 1
-        filter: none
+#logo-list
+  display: inline-grid
+  grid-template-columns: 1fr 1fr
+  grid-gap: 1rem
+  justify-items: stretch
+  align-items: start
+  font-size: 1em
+  height: 100%
+  .grid-item
+    font-size: 1rem
+    position: relative
+  img
+    transition: $transition
+    filter: grayscale(1)
+    max-width: 100%
+    &:hover
+      opacity: 1
+      filter: none
 
 
 // Forms
@@ -384,14 +390,18 @@ form
           &.process-img
             width: 20rem
         ~ .module
-          width: 50%
+          width: 50rem
           margin-left: 5rem
   .grid
     padding: 8rem 0
-    &.logo-list
-      img
-        margin: 1.5rem
-        max-width: 15rem
+  #logo-list
+    grid-template-columns: 1fr 1fr 1fr 1fr
+    &:hover
+      .grid-item
+        opacity: .75
+    .grid-item
+      &:hover
+        opacity: 1
 
   nav.container
     background: none

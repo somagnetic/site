@@ -28,6 +28,9 @@ cdn:
     </h1>
   </article>
 </header>
+<section class="container">
+
+</section>
 
 <section class="container" id="work">
   <article class="row">
@@ -35,29 +38,68 @@ cdn:
       <h3>Work</h3>
       <h2>Here are some clients that we've had the pleasure of working with</h2>
     </div>
-    <div class="module grid logo-list">
-      <a href="{{site.baseurl}}/archive/the-glass-frontier"><img src="{{site.baseurl}}/assets/img/case-study/the-glass-frontier/tgf-4-type-only-lockup-dark.svg " alt="The Glass Frontier logo, designed by So Magnetic" title="The Glass Frontier logo, designed by So Magnetic"></a>
-      <a href="{{site.baseurl}}/archive/compass-of-design"><img src="{{site.baseurl}}/assets/img/case-study/compass-of-design/cod-logo.svg" alt="Compass of Design logo, designed by So Magnetic" title="Compass of Design logo, designed by So Magnetic"></a>
-      <a href="{{site.baseurl}}/archive/clinically-media"><img src="{{site.baseurl}}/assets/img/logo-list/cm-logo-1-wordmark-dark.svg" alt="Clinically Media Logo, designed by So Magnetic" title="Clinically Media Logo, designed by So Magnetic"></a>
-      <a href="{{site.baseurl}}/archive/keyspark"><img src="{{site.baseurl}}/assets/img/logo-list/ks-logo-wordmark-grey-300-svg.svg" alt="KeySpark Logo, designed by So Magnetic" title="KeySpark Logo, designed by So Magnetic"></a>
-      <a href="{{site.baseurl}}/archive/minimum"><img src="{{site.baseurl}}/assets/img/logo-list/m-logo.svg" alt="Logo Design for Minimum, designed by So Magnetic" title="Logo Design for Minimum, designed by So Magnetic"></a>
-      <a href="#" style="cursor:not-allowed"><img src="{{site.baseurl}}/assets/img/logo-list/tl.svg" alt="Logo design for Travelight, designed by So Magnetic" title="Logo design for Travelight, designed by So Magnetic"></a>
-      <a href="#" style="cursor:not-allowed"><img src="{{site.baseurl}}/assets/img/logo-list/icon-5-peaks.svg" alt="Logo design for Five Peaks Brewery, designed by So Magnetic" title="Logo design for Five Peaks Brewery, designed by So Magnetic"></a>
-      <a href="#" style="cursor:not-allowed"><img src="{{site.baseurl}}/assets/img/logo-list/gyc.svg" alt="Logo design for Grow Your Code Podcast, designed by So Magnetic" title="Logo design for Grow Your Code Podcast, designed by So Magnetic"></a>
-      <a href="#" style="cursor:not-allowed"><img src="{{site.baseurl}}/assets/img/logo-list/gem.svg" alt="Personal Branding and logo, designed by So Magnetic" title="Personal Branding and logo, designed by So Magnetic"></a>
+    <div class="module" id="logo-list">
+      <div class="grid-item">
+        <a href="{{site.baseurl}}/archive/the-glass-frontier"><img src="{{site.baseurl}}/assets/img/case-study/the-glass-frontier/tgf-4-type-only-lockup-dark.svg " alt="The Glass Frontier logo, designed by So Magnetic" title="The Glass Frontier logo, designed by So Magnetic"></a>
+      </div>
+
+      <div class="grid-item">
+        <a href="{{site.baseurl}}/archive/compass-of-design"><img src="{{site.baseurl}}/assets/img/case-study/compass-of-design/cod-logo.svg" alt="Compass of Design logo, designed by So Magnetic" title="Compass of Design logo, designed by So Magnetic"></a>
+      </div>
+
+      <div class="grid-item">
+        <a href="{{site.baseurl}}/archive/clinically-media"><img src="{{site.baseurl}}/assets/img/logo-list/cm-logo-1-wordmark-dark.svg" alt="Clinically Media Logo, designed by So Magnetic" title="Clinically Media Logo, designed by So Magnetic"></a>
+      </div>
+
+      <div class="grid-item">
+        <a href="{{site.baseurl}}/archive/keyspark"><img src="{{site.baseurl}}/assets/img/logo-list/ks-logo-wordmark-grey-300-svg.svg" alt="KeySpark Logo, designed by So Magnetic" title="KeySpark Logo, designed by So Magnetic"></a>
+      </div>
+
+      <div class="grid-item">
+        <a href="{{site.baseurl}}/archive/minimum"><img src="{{site.baseurl}}/assets/img/logo-list/m-logo.svg" alt="Logo Design for Minimum, designed by So Magnetic" title="Logo Design for Minimum, designed by So Magnetic"></a>
+      </div>
+
+      <div class="grid-item">
+        <a href="#" style="cursor:not-allowed"><img src="{{site.baseurl}}/assets/img/logo-list/tl.svg" alt="Logo design for Travelight, designed by So Magnetic" title="Logo design for Travelight, designed by So Magnetic"></a>
+      </div>
+
+      <div class="grid-item">
+        <a href="#" style="cursor:not-allowed"><img src="{{site.baseurl}}/assets/img/logo-list/icon-5-peaks.svg" alt="Logo design for Five Peaks Brewery, designed by So Magnetic" title="Logo design for Five Peaks Brewery, designed by So Magnetic"></a>
+      </div>
+
+      <div class="grid-item">
+        <a href="#" style="cursor:not-allowed"><img src="{{site.baseurl}}/assets/img/logo-list/gyc.svg" alt="Logo design for Grow Your Code Podcast, designed by So Magnetic" title="Logo design for Grow Your Code Podcast, designed by So Magnetic"></a>
+      </div>
+
+      <div class="grid-item">
+        <a href="#" style="cursor:not-allowed"><img src="{{site.baseurl}}/assets/img/logo-list/gem.svg" alt="Personal Branding and logo, designed by So Magnetic" title="PersoBranding
+         and logo, designed by So Magnetic"></a>
+       </div>
+
 
     </div>
   </article>
   {% for post in site.categories.testimony %}
   {% capture article %}{% cycle '1', '2' %}{% endcapture %}
   {% if article == '1' %}<article class="row">{% endif %}
-    <div class="module">
-      <h4>{{post.who}}</h4>
+    <div class="testimony module">
+      <figure class="snip1197">
+        <figcaption>
+          <blockquote>{{post.testimony}}</blockquote>
+          <div class="arrow"></div>
+        </figcaption>
+        <img src="{{site.baseurl}}{{post.profile}}" alt="Branding Design Client - {{post.who}} / {{post.occupation}}"/>
+        <div class="author">
+          <strong>{{post.who}}<span>- {{post.occupation}}</span></strong>
+        </div>
+      </figure>
+      <!-- <h4>{{post.who}}</h4>
       <h5>{{post.occupation}}</h5>
-      <p>&ldquo; {{post.testimony}} &rdquo;</p>
-      <br/>
-      <br/>
+      <p>&ldquo; {{post.testimony}} &rdquo;</p> -->
+      <!-- <br/>
+      <br/> -->
     </div>
+
     {% if article == '2' or forloop.last %}</article>{% endif %}
     {% endfor %}
 <!--
