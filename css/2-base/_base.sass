@@ -231,22 +231,22 @@ footer
   align-items: center
   width: 100%
 
-  .row
-    width: 90%
-    font-size: 1.5rem
-    margin-bottom: 10rem
-    .module
-      display: inline-block
-      vertical-align: top
-      img
-        &.client-logo
-          display: inline
-          height: 5rem
-          width: auto
-          max-width: 30rem
-          margin-right: 2rem
-          &:nth-of-type(1n+3)
-            height: 3rem
+.row
+  width: 90%
+  font-size: 1.5rem
+  margin-bottom: 10rem
+.module
+  display: inline-block
+  vertical-align: top
+  img
+    &.client-logo
+      display: inline
+      height: 5rem
+      width: auto
+      max-width: 30rem
+      margin-right: 2rem
+      &:nth-of-type(1n+3)
+        height: 3rem
 
 // Grid Columns
 // .grid
@@ -274,11 +274,19 @@ footer
   padding: 8rem 4rem
   &.logo-list
     padding: 0
+    display: inline-grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 2.5rem
+    justify-items: stretch
+    align-items: center
+    font-size: 1em
     img
+      align-self: center
       opacity: 1
       transition: $transition
       filter: grayscale(1)
-      width: 40vw
+      width: 100%
+      max-height: 25vw
       margin: .2rem
     &:hover img
       opacity: .5
@@ -420,10 +428,13 @@ form
   .grid
     padding: 8rem 0
     &.logo-list
+      grid-template-columns: 1fr 1fr 1fr
+      align-items: center
+      font-size: 1em
       img
         margin: 1.5rem
-        min-width: 10rem
-        max-width: 10rem
+        max-height: 10vw
+        align-self: center
   nav.container
     background: none
     img
