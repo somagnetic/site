@@ -27,10 +27,11 @@ outcome:
 - The final logo works to capture attention and remain legible at a plethora of sizes along with different marks for different uses.
 - We'll update when the logo design is live.
 svg_logo:
-- /the-glass-frontier/tgf-4-type-only-lockup-glass.svg 
+- /the-glass-frontier/tgf-4-word-mark-dark.svg
 logo_additional:
-- /the-glass-frontier/tgf-3-small-stacked-lockup-glass.svg
-- /the-glass-frontier/tgf-4-type-only-lockup-glass.svg
+- /the-glass-frontier/tgf-3-brand-mark-small-dark.svg
+- /the-glass-frontier/tgf-2-brand-mark-medium-dark.svg
+- /the-glass-frontier/tgf-1-brand-mark-large-dark.svg
 index_image: /the-glass-frontier/the-glass-frontier-logotype.jpg
 image_path: /assets/img/case-study/the-glass-frontier/
 study_images:
