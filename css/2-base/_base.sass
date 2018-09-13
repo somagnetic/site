@@ -4,7 +4,7 @@
   margin: 0
   padding: 0
 html
-  font-family: 'hk-nova-regular', "Helvetica", Arial, Verdana, sans-serif
+  font-family: 'Poppins', "Helvetica", Arial, Verdana, sans-serif
   @include responsive-font(1vw, 10px, 13px)
   color: $dark
 body
@@ -12,22 +12,9 @@ body
   line-height: 1.8
   opacity: 0
   transition: all ease .4s
-
 .hidden
   display: none !important
   opacity: 0
-.mobile
-  display: block
-  opacity: 1
-  @media only screen and (min-width: 800px)
-    display: none
-    opacity: 0
-.desktop
-  display: none
-  opacity: 0
-  @media only screen and (min-width: 800px)
-    display: block
-    opacity: 1
 .cf::after
   content: ' '
   visibility: hidden
@@ -66,7 +53,7 @@ a:before
   width: 0%
   height: 2px
   background-color: $main
-  bottom: .8em
+  top: 100%
   right: 0
   transition: $transition
 a:hover:before
@@ -76,40 +63,43 @@ h2, h3, h4, h5, h6
   width: fit-content
 
 h6
-  font-family: "hk-nova-regular"
   font-size: 1.7rem
   font-weight: 400
   margin-bottom: $margin
 h5
-  font-family: "hk-nova-regular"
   font-size: 2rem
   font-weight: 400
   margin-bottom: $margin
 h4
-  font-family: "hk-nova-regular"
   font-size: 2.3rem
   font-weight: 300
   margin-bottom: $margin
 h3
-  font-family: "hk-nova-bold"
   font-size: 2.5rem
   font-weight: 300
   margin-bottom: $margin
   color: $main
 h2
-  font-family: "hk-nova-bold"
   font-size: 3rem
   font-weight: 300
   margin-bottom: $margin
 h1
-  font-family: "hk-nova-heavy"
   font-size: 5.7rem
   margin-bottom: $margin
   letter-spacing: -.05em
 p, h5, h6
   margin-bottom: 2rem
-  a
-    border-bottom: 2px solid $main
+  a:before
+    content: ""
+    position: absolute
+    width: 100%
+    height: 2px
+    background-color: $main
+    top: 100%
+    left: 0
+    transition: $transition
+  a:hover:before
+    width: 20%
 strong
   color: #000
 i
