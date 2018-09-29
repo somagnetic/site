@@ -6,7 +6,12 @@ title: Logo Design for clinical trial marketing company — Clinically Media
 study_title: Clinically Media
 project: Create a new logo identity for Clinically Media
 blurb: When you're going up against established companies for some of the biggest clients with really high stakes, you need to be confident and relevant, yet you need to stand out enough to get noticed. We wanted to focus on showcasing Clinically Media’s brand as the right choice to Medical directors or VPs of clinical operations. Their services provide a very thought out and data focused approach to clinical trial recruiting campaigns for smaller biotech's and startups who are making a difference in the world.
-substudy_title: Logo Design, Social Media Profiles, Corporate stationary, Framework and Wayfinding
+branding:
+- Logo Design
+- Social Media Avatars
+- Corporate Stationary
+- Brand Style Guides
+- Wayfinding
 description: The founder of Clinically Media brought us on to reach their goal of repositioning themselves as the right choice within their market.
 team:
 - Darian Rosebrook

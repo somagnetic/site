@@ -80,14 +80,29 @@ cdn:
     {% endfor %}
   {% for post in site.categories.case-study %}
   {% if post.ready %}
-    <article class="row grid" id="{{post.study_id}}" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, .9) 15%, rgba(254, 254, 254, .9)), url('{{post.image_path}}header.jpg');background-position: left center;background-repeat: no-repeat;background-size: cover;">
-      <div class="module">
+    <article class="row grid" >
+      <div class="module study-img" id="{{post.study_id}}" style="width: 100%; background-image:  url('{{post.image_path}}header.jpg');background-position: left center;background-repeat: no-repeat;background-size: cover;">
         <!-- <img src="{{site.baseurl}}/assets/img/case-study" alt="{{post.subtitle}}"> -->
       </div>
       <div class="module">
         <img src="{{site.baseurl}}/assets/img/case-study{{post.svg_logo}}" alt="{{post.description}}" class="client-logo">
         <h3><a href="{{site.baseurl}}{{post.url}}" class="case-study">{{post.study_title}}</a></h3>
-        <h6>{{post.subtitle}}</h6>
+        <p>{% if post.branding %}
+            {% for item in post.branding limit:3%}
+              {{item}}
+              {% if forloop.last %}
+              {% else %},
+              {% endif %}
+            {% endfor %}
+        {% endif %}
+        {% if post.ux %},
+            {% for item in post.ux limit:3%}
+              {{item}}
+              {% if forloop.last %}
+              {% else %},
+              {% endif %}
+            {% endfor %}
+        {% endif %}</p>
         <p>{{post.description}}</p>
         <h6><a href="{{site.baseurl}}{{post.url}}" class="word-highlight">See {{post.study_title}}'s case study</a></h6>
       </div>

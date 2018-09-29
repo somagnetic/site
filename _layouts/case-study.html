@@ -2,15 +2,47 @@
 layout: default
 ---
 
-<header class="container case-study" id="{{page.study_id}}" style="background-image: linear-gradient(to bottom, rgba(255, 255, 255, .9) 15%, rgba(254, 254, 254, .9)), url('{{site.baseurl}}{{page.image_path}}header.jpg');background-position: left center;background-repeat: no-repeat;background-size: cover;">
+<header class="container case-study" id="{{page.study_id}}" >
   <article class="row">
-    <div class="module">
+    <div>
+      <h3>Client Case Study:</h3>
+      <h2>{{page.study_title}}</h2>
+      <p>{{page.blurb}}</p>
     </div>
-    <div class="module">
-
-        <h3>Case Study:</h3>
-        <h1>{{page.study_title}}</h1>
-        <p>{{page.blurb}}</p>
+    <div class="grid case-study">
+      <div class="grid-item">
+        <h6>Date.</h6>
+        <p>{{ page.date | date: "%B %Y"}}.</p>
+      </div>
+      <div class="grid-item">
+        <h6>Team.</h6>
+        <ul class="team">
+          {% for team in page.team %}
+          {% assign iteration = forloop.index0 1%}
+          <li><strong>{{page.role[iteration]}}</strong><br> - {{team}}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% if page.branding %}
+      <div class="grid-item">
+        <h6>Branding.</h6>
+        <ul>
+          {% for item in page.branding %}
+            <li>{{item}}.</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      {% if page.ux %}
+      <div class="grid-item">
+        <h6>User Experience.</h6>
+        <ul>
+          {% for item in page.ux %}
+            <li>{{item}}.</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
     </div>
   </article>
 </header>
@@ -19,15 +51,6 @@ layout: default
   <div class="module">
     <h4>Project:</h4>
     <h5>{{page.project}}</h5>
-    <p><strong class="word-highlight"><small>Team:</small></strong></p>
-    <ul class="team">
-      {% for team in page.team %}
-      {% assign iteration = forloop.index0 1%}
-      <li><strong>{{page.role[iteration]}} - {{team}}</strong></li>
-      {% endfor %}
-    </ul>
-    <p><strong class="word-highlight"><small>Project Scope</small></strong></p>
-    <p>{{page.subtitle}}</p>
     <h4>Our Main Goals:</h4>
     {% for paragraph in page.goals %}<p>{{paragraph}}</p>{% endfor %}
     <h4>The Challenge</h4>

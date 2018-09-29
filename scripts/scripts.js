@@ -216,7 +216,7 @@ class ShapeOverlays {
       toggleButton.textContent = "Close";
       toggleButton.classList.add('is-opened-navi', 'tertiary');
       for (var i = 0; i < gNavItems.length; i++) {
-        if(i>=3){
+        if(i>=4){
           gNavItems[i].classList.add('is-opened');
         } else {
           gNavItems[i].classList.remove('is-opened');
@@ -224,11 +224,11 @@ class ShapeOverlays {
       }
     } else {
       item.classList.toggle('is-opened-navi', 'tertiary');
-      toggleButton.textContent = "Start a Project";
+      toggleButton.textContent = "Get in contact";
       toggleButton.classList.remove('is-opened-navi', 'tertiary');
       for (var i = 0; i < gNavItems.length; i++) {
 //
-          if(i>=3){
+          if(i>=4){
             gNavItems[i].classList.remove('is-opened');
           } else {
             gNavItems[i].classList.add('is-opened');

@@ -6,7 +6,12 @@ title: Logo Design for Professional Business and Residential Cleaners — The Gl
 study_title: The Glass Frontier
 project: Create a new logo identity for The Glass Frontier
 blurb: In the city of anchorage, there are more than 50 businesses that serve businesses and residential homes with window, roof, and gutter cleaning. How do you show the level of quality and detail of service in a way that leads other people to choose your service?
-substudy_title: Logo Design, Social Media Avatar, Vehicle Branding, and Framework
+branding:
+- Logo Design
+- Social Media Avatar
+- Vehicle Branding
+- Brand Framework
+- Brand Style Guide
 description: The founder of The Glass Frontier brought us on to reach their goal of building a strong and reliable brand that represents them as the best price and most communicative with amazing customer service
 team:
 - Darian Rosebrook

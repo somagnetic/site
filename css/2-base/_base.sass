@@ -58,7 +58,7 @@ a:before
   transition: $transition
 a:hover:before
   width: 100%
-h2, h3, h4, h5, h6
+h2, h3, h4, h5
   position: relative
   width: fit-content
   font-weight: 400
@@ -155,10 +155,9 @@ nav.container
       display: inline-flex
       justify-content: space-between
   ul
-    list-style: none
     li
-      display: inline-flex
-      padding: 1rem
+      padding-left: 1em
+      list-style: none
       align-items: center
       cursor: pointer
   img
@@ -169,7 +168,12 @@ nav.container
   right: 3rem
   z-index: 1000
   cursor: pointer
-
+ul
+  li
+    padding-left: .5em
+    list-style: none
+    align-items: center
+    cursor: pointer
 
 
 header.container
@@ -179,9 +183,14 @@ header.container
   padding: 0 3vw
   overflow: hidden
   height: calc(100vw *1.7)
+  .row
+    display: flex
   &.case-study
     height: auto
     padding: 5rem 0
+    .row
+      display: flex
+      width: 65%
   h1
     line-height: 1.5
     font-size: 3.2rem
@@ -198,7 +207,6 @@ footer
 
 // Scaffolding
 .container
-  @include container()
   display: flex
   flex-direction: column
   justify-content: flex-start
@@ -245,6 +253,11 @@ footer
         opacity: 1
         filter: none
 
+  .study-img
+    width: 100%
+    height: 30vh
+    margin-bottom: 2em
+.grid-item
 // Forms
 #contact
   top: 0
@@ -352,9 +365,10 @@ form
     line-height: 1.3
   .container
     .row
+      display: grid
+      grid-template-columns: 1fr 1fr
       width: 82%
       .module
-        width: 50rem
         img
           width: 100%
           &.client-logo
@@ -367,6 +381,7 @@ form
           width: 50rem
           margin-left: 5rem
   .grid
+    display: grid
     padding: 8rem 0
     &.logo-list
       grid-template-columns: 1fr 1fr 1fr
@@ -376,6 +391,11 @@ form
         margin: 1.5rem
         max-height: 10vw
         align-self: center
+    &.case-study
+      grid-template-columns: 1fr 1fr 1fr 1fr
+    .study-img
+      width: 100%
+      height: auto
   nav.container
     background: none
     img
@@ -404,6 +424,8 @@ form
       padding: 12rem 0
 
     .row
+      display: flex
+      flex-direction: column
       width: 85%
       .module
         img
