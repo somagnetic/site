@@ -21,10 +21,8 @@ ux:
 description: We worked with Compass of Design to completely design the brand experience for new designers looking to level up their skills. This project included digital designs, product and packaging design, with user and brand experience.
 team:
 - Darian Rosebrook
-- Juliane Bone
 role:
 - Creative Director
-- Logo Designer
 goals:
 - Create a lasting, recognizable brand
 - Generate a strong brand framework that can carry future projects and products
