@@ -48,6 +48,10 @@ layout: default
 </header>
 <section class="container">
   <article class="row">
+
+      <img src="{{site.baseurl}}{{page.image_path}}{{page.study_images[0]}}" alt="">
+  </article>
+  <article class="row grid">
   <div class="module">
     <h4>Project:</h4>
     <h5>{{page.project}}</h5>
@@ -83,6 +87,8 @@ layout: default
       Start a project with us
     </div>
   </div>
+</article>
+<article>
     <div class="module">
       {% for images in page.study_images %}
       {% assign iteration = forloop.index0 1%}

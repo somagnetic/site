@@ -9,7 +9,7 @@ cdn:
 ---
 
 <header class="container" id="hero">
-  <article class="row">
+  <article class="row ">
     <h1 class="cd-headline push"><span>We use strategic brand identity design in ways that &mdash; </span>
     <span class="cd-words-wrapper word-highlight">
       <b class="is-visible">helps you announce exciting changes in your business.</b>
@@ -42,7 +42,7 @@ cdn:
 </section>
 
 <section class="container" id="work">
-  <article class="row">
+  <article class="row grid">
     <div class="module">
       <h3>Work</h3>
       <h2>Here are some clients that we've had the pleasure of working with</h2>
@@ -62,7 +62,7 @@ cdn:
   </article>
   {% for post in site.categories.testimony %}
   {% capture article %}{% cycle '1', '2' %}{% endcapture %}
-  {% if article == '1' %}<article class="row">{% endif %}
+  {% if article == '1' %}<article class="row grid">{% endif %}
     <div class="testimony module">
       <figure class="snip1197">
         <figcaption>
@@ -80,7 +80,7 @@ cdn:
     {% endfor %}
   {% for post in site.categories.case-study %}
   {% if post.ready %}
-    <article class="row grid" >
+    <article class="row grid grid" >
       <div class="module study-img" id="{{post.study_id}}" style="width: 100%; background-image:  url('{{post.image_path}}header.jpg');background-position: left center;background-repeat: no-repeat;background-size: cover;">
         <!-- <img src="{{site.baseurl}}/assets/img/case-study" alt="{{post.subtitle}}"> -->
       </div>
@@ -108,7 +108,7 @@ cdn:
       </div>
     </article>{% else %}{% endif %}
   {% endfor %}
-  <article class="row" id="services">
+  <article class="row grid" id="services">
     <div class="module">
       <h3>Our Services</h3>
       <h2>How we help your company succeed</h2>
@@ -117,8 +117,12 @@ cdn:
     </div>
     <div class="module"><img src="{{site.baseurl}}/assets/img/strategy.jpg" alt="">
       <h5>We offer a range of skills available to your company</h5>
+    </div>
+  </article>
+  <article class="row" style="align-items: top;">
+    <div class="grid logo-list">
+      <ul style="display: inline-block;">
       <h3>Design Strategy</h3>
-      <ul>
         <li>Brand Strategy Sprints</li>
         <li>Competitive Audits</li>
         <li>Brand Audits</li>
@@ -128,9 +132,8 @@ cdn:
         <li>Goal Discovery</li>
         <li>Rollout Strategy</li>
       </ul>
-      <br />
-      <h3>Brand Identity Design</h3>
-      <ul>
+      <ul style="display: inline-block;">
+      <h3>Brand Identity</h3>
         <li>Logo and Identity Systems</li>
         <li>Brand Development</li>
         <li>Brand Style Guides</li>
@@ -138,9 +141,8 @@ cdn:
         <li>Iconography</li>
         <li>Rebranding</li>
       </ul>
-      <br />
+      <ul style="display: inline-block;">
       <h3>Experience Design</h3>
-      <ul>
         <li>Information Architecture</li>
         <li>UX / UI</li>
         <li>Wireframing</li>
@@ -150,10 +152,9 @@ cdn:
         <li>Website Design</li>
         <li>Social Media Branding</li>
       </ul>
-      <br />
     </div>
   </article>
-  <article class="row" id="about">
+  <article class="row grid" id="about">
     <div class="module">
       <h3>About</h3>
       <h2>Who we are is defined by what we do</h2>
@@ -163,7 +164,8 @@ cdn:
     <img src="{{site.baseurl}}/assets/img/darian-rosebrook.jpg" alt="">
       <p><img class="client-logo" src="{{site.baseurl}}/assets/img/magnet-wordmark-dark.svg" alt="{{page.description}}"/>
       </p>
-      <h5>So Magnetic doesn't play the same game as other design agencies.</h5>
+      <p>{{page.description}}</p>
+      <h5>However, So Magnetic doesn't play the same game as other design agencies.</h5>
       <p><strong>We combine your business and market knowledge with our design strategy and the expertise of our team.</strong> In order to achieve the goals you set for the project through design strategy, we work together on the goals and details of the project.</p>
       <p>As an agile company, <strong>the team we select for your project grows or shrinks depending on your project’s needs</strong>. Some projects need a handful of specialists, like wordpress experts who have years of experience making sites for teenagers or a custom icon designer who has sure-fire knowledge of the medical terms, objects, and practices. Each project has its unique opportunities that requires the right team, all the way from junior designers to seasoned experts in the field.
       </p>
@@ -171,7 +173,7 @@ cdn:
       </p>
     </div>
   </article>
-  <article class="row" id="process">
+  <article class="row grid" id="process">
     <div class="module">
       <h3>Working with us</h3>
       <h2>Exceptional design should be delivered along side of a solid business strategy.</h2>
@@ -188,7 +190,7 @@ cdn:
 
     </div>
     </article>
-    <article class="row">
+    <article class="row grid">
       <div class="module">
 
       </div>
