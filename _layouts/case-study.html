@@ -88,12 +88,11 @@ layout: default
     </div>
   </div>
 </article>
-<article>
-    <div class="module">
+<article class="row grid">
       {% for images in page.study_images %}
       {% assign iteration = forloop.index0 1%}
         <img src="{{site.baseurl}}{{page.image_path}}{{page.study_images[iteration]}}" alt="">
       {% endfor %}
-    </div>
+    
   </article>
 </section>
