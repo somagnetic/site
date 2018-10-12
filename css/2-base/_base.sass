@@ -8,9 +8,9 @@ html
   font-family: 'Poppins', "Helvetica", Arial, Verdana, sans-serif
   @include responsive-font(1vw, 10px, 14px)
   color: $dark
-body
   background: $light
   line-height: 1.8
+body
   opacity: 0
   transition: all ease .4s
 .hidden
@@ -27,6 +27,7 @@ body
 img
   display: inline-block
   width: 100%
+  
 // Animations
 .transition
   transition: all ease .3s
@@ -36,13 +37,10 @@ img
   100%
     opacity: 1
 body.main
-  animation: fadeIn 1.5s
+  animation: fadeIn 2.5s
   opacity: 1
 
 // Typography
-.team
-  list-style: none
-  margin-bottom: 2rem
 a, a:link, a:visited, a:hover, a:focus
   display: inline-block
   transition: $transition
@@ -88,7 +86,7 @@ h1
 p
   margin-bottom: 2rem
 strong
-  color: $highlight-3
+  color: #000
 i
   margin-right: 2rem
   margin-left: 2rem
@@ -158,8 +156,6 @@ nav.container
   ul
     li
       padding-left: 1em
-      list-style: none
-      align-items: center
   img
     width: 10vw
 #start
@@ -411,7 +407,7 @@ form
   #start
     position: fixed
     text-align: center
-    top: 4.5rem
+    top: 2.5em
     right: 3rem
     bottom: auto
     left: auto

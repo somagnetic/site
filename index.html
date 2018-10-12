@@ -10,28 +10,28 @@ cdn:
 
 <header class="container" id="hero">
   <article class="row ">
-    <h1 class="cd-headline push"><span>We use strategic brand identity design in ways that &mdash; </span>
+    <h1 class="cd-headline push"><span>We use strategic branding design to &mdash; </span>
     <span class="cd-words-wrapper word-highlight">
-      <b class="is-visible">helps you announce exciting changes in your business.</b>
+      <b class="is-visible">help you announce exciting changes in your business.</b>
       <b>bridge the gap between the customer and your brand.</b>
-      <b>helps your brand secure your Series A funding</b>
+      <b>help your brand secure your Series A funding</b>
       <b>drive higher monthly recurring revenue.</b>
-      <b>helps make a positive first impression with stakeholders.</b>
-      <b>lets you act on your qualitative and quantitative market research.</b>
-      <b>gives you clarity through focusing on your business growth.</b>
-      <b>showcases the quality of your products.</b>
-      <b>establishes your brand as the right choice to your customers.</b>
-      <b>launches your brand out of the start-up phase into the mature markets.</b>
+      <b>help make a positive first impression with stakeholders.</b>
+      <b>let you act on your qualitative and quantitative market research.</b>
+      <b>give you clarity through focusing on your business growth.</b>
+      <b>showcase the quality of your products.</b>
+      <b>establish your brand as the right choice to your customers.</b>
+      <b>launch your brand out of the start-up phase into the mature markets.</b>
       <b>scale your business faster through effective branding.</b>
       <b>update and unify outdated branding.</b>
       <b>lay the foundation for a strong business culture.</b>
       <b>reduce bounce and churn rates.</b>
       <b>differentiate you from your competitors.</b>
-      <b>lets you catch an industry wave early.</b>
-      <b>helps your company transition to a new market.</b>
-      <b>helps you recover from negative brand perception.</b>
-      <b>meets the exact needs of your customers.</b>
-      <b>sets up an agile brand framework for an agile company.</b>
+      <b>let you catch an industry wave early.</b>
+      <b>help your company transition to a new market.</b>
+      <b>help you recover from negative brand perception.</b>
+      <b>meet the exact needs of your customers.</b>
+      <b>set up an agile brand framework for an agile company.</b>
 
     </span>
     </h1>
@@ -64,15 +64,15 @@ cdn:
   {% capture article %}{% cycle '1', '2' %}{% endcapture %}
   {% if article == '1' %}<article class="row grid">{% endif %}
     <div class="testimony module">
+    <div class="author">
+    </div>
       <figure class="snip1197">
         <figcaption>
-          <blockquote>{{post.testimony}}</blockquote>
+          <blockquote>{{post.testimony}}<br /><br />
+            <strong>{{post.who}}</strong><span> - {{post.occupation}}</span></blockquote>
           <div class="arrow"></div>
         </figcaption>
         <img src="{{site.baseurl}}{{post.profile}}" alt="Branding Design Client - {{post.who}} / {{post.occupation}}"/>
-        <div class="author">
-          <strong>{{post.who}}</strong><span> - {{post.occupation}}</span>
-        </div>
       </figure>
     </div>
 
@@ -116,11 +116,11 @@ cdn:
 
     </div>
     <div class="module"><img src="{{site.baseurl}}/assets/img/strategy.jpg" alt="">
-      <h5>We offer a range of skills available to your company</h5>
     </div>
   </article>
-  <article class="row" style="align-items: top;">
-    <div class="grid logo-list">
+  <article class="row">
+    <h5>Through strategy, we craft seamless solutions to your business goals. Here is a little bit of what is involved.</h5>
+    <div class="grid logo-list" style="align-items: start; width: 100%;">
       <ul style="display: inline-block;">
       <h3>Design Strategy</h3>
         <li>Brand Strategy Sprints</li>
